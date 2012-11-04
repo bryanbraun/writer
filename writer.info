@@ -1,0 +1,20 @@
+
+; Other possible names: Expert, Clarity, Thinker, Bookworm, Illuminate, Reflections
+
+name = Writer
+description = A minimalist theme designed for a personal blog, with the intention to emphasize incredible text-based content.
+
+core = 6.x
+engine = phptemplate
+
+stylesheets[all][] = style.css
+stylesheets[all[] = 
+; scripts[]  = script.js ; use this in case we need any scripts
+
+; no regions are listed, thus this theme will only use the default drupal regions
+; (header, left-sidebar, right-sidebar, content, and footer)
+
+; supports three basic features (still need to set these up), name, slogan, and favicon
+features[] = name
+features[] = slogan
+features[] = favicon

@@ -1,0 +1,276 @@
+/**
+ * Writer - A theme by Bryan Braun
+ * http://bryanbraun.com
+ *
+ * I will not put credits on the front of your site, so
+ * please, leave this credit in the code comments. Thanks.
+ *
+ * Principles:
+ * - Brutally simple design
+ * - Fantastic typography
+ * - Support for code snippets
+ *
+ * Methods:
+ * - Incorporate the golden ratio -- 1:1.62
+ * - Color Palette: #F7F7F7, #888888, #292929
+ * - Be Responsive
+ */
+
+/**
+ * CSS Reset designed by Eric Meyer
+ * http://meyerweb.com/eric/tools/css/reset/
+ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define visible focus styles! 
+:focus {
+	outline: ?????;
+} */
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/**
+ * Writer Theme Styles
+ */
+
+/** General Styles **/
+
+body {
+	/* colors -- nearly black on nearly white */
+	font-family: 'Merriweather', 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+	background-color: #F7F7F7;
+	color: #292929;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 1em 0;
+	font-weight: 700;
+	line-height: 1em;
+}
+
+h1 { font-size: 2.62em; } /* = 1.62 * 1.62 */
+h2 { font-size: 1.94em; } /* = 1.2 * 1.62 */
+h3 { font-size: 1.62em; } /* = 1 * 1.62 */
+h4 { font-size: 1.4em; }
+h5 { font-size: 1.2em; }
+h6 { font-size: 1em; }
+
+p {
+	margin-bottom: 1em;
+}
+
+img {
+	margin: 20px;
+}
+
+ul, ol, dl {
+	margin: 1em 0;
+	padding-left: 40px;
+}
+
+ul li {
+	list-style-type: disc;
+}
+
+ol li {
+	list-style-type: decimal;
+}
+
+blockquote {
+	margin-left: 1.94em;
+	font-style: italic;
+}
+
+#wrapper {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 0 0 0 100px;
+	font-size: 1.2em;
+	line-height: 1.62em;
+}
+
+/** Specific Styles **/
+
+header {
+	width: 100%;
+	padding: 1.62em 0;
+}
+
+#site-name {
+	float: left;
+	width: 50%;
+	font-family: 'Lato', Helvetica, sans-serif;
+	font-size: 1em;
+	color: #888888;
+	text-transform: uppercase;
+	font-weight: bold;
+	line-height: 1em;
+}
+
+/* Navigation */
+nav {
+	float: right;
+	width: 50%;
+	height: 1em;
+}
+
+nav ul {
+	margin: 0;
+}
+
+nav li {
+	list-style-type: none;
+	float: right;
+	padding: 4px 0.5em;
+	line-height: 11px;
+}
+
+nav a {
+	display: block;
+	font-family: 'Lato', Helvetica, sans-serif;
+	font-size: 0.62em;
+	color: #888888;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+article {
+	position: relative;
+	padding-top: 1px; /* fixes h1 margin bug */
+}
+
+.date {
+/* move this into body on narrow devices */
+	position: absolute;
+	top: 50px;
+	left: -90px;
+	font-family: 'Lato', Helvetica, sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #888888;
+	height: 2.62em;
+	width: 70px;
+	text-align: center;
+	line-height: 1.2em;
+}
+
+/* Footer */
+
+footer {
+	float: right;
+	width: 100%;
+	padding: 1.62em 0;
+}
+
+footer ul {
+	margin: 0;
+}
+
+footer li {
+	list-style-type: none;
+	float: right;
+	padding: 4px 0.5em;
+	line-height: 11px;
+}
+
+footer a {
+	display: block;
+	font-family: 'Lato', Helvetica, sans-serif;
+	font-size: 0.62em;
+	color: #888888;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+/* uncomment to try out indented paragraphs 
+article p:first-of-type {
+	text-indent: 0px; 
+}
+
+article p {
+	text-indent: 1.5em;
+	margin: 0px;
+}
+*/
+
+/** reusable classes **/
+
+.hide {
+	display: none;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clear {
+	clear: both;
+}
+
+/* clearfix technique */
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1; 
+}

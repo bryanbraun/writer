@@ -1,0 +1,35 @@
+/* 'Zebra' styling for code examples */
+
+code, samp, kbd {
+	font-family: "Inconsolata", "Menlo", "Consolas", monospace;
+	text-align: left;
+	padding: 0 6px;
+	}
+
+pre, pre code {
+  	font:normal 12px/22px Monaco, monospace !important;
+    color:#F7F7F7;
+  	background-color:#2f2f2f;
+  	background-image:-webkit-repeating-linear-gradient(top, #444 0px, #444 22px, #2f2f2f 22px, #2f2f2f 44px);
+  	background-image:-moz-repeating-linear-gradient(top, #444 0px, #444 22px, #2f2f2f 22px, #2f2f2f 44px);
+  	background-image:-ms-repeating-linear-gradient(top, #444 0px, #444 22px, #2f2f2f 22px, #2f2f2f 44px);
+  	background-image:-o-repeating-linear-gradient(top, #444 0px, #444 22px, #2f2f2f 22px, #2f2f2f 44px);
+  	background-image:repeating-linear-gradient(top, #444 0px, #444 22px, #2f2f2f 22px, #2f2f2f 44px);
+	padding: 0em 1em;
+	border: 11px solid #383838;
+	margin: 1.7em 0 1.7em 0.3em;
+	overflow: auto;
+	}
+
+/* target IE7 and IE6 */
+*:first-child+html pre {
+	padding-bottom: 2em;
+	overflow-y: hidden;
+	overflow: visible;
+	overflow-x: auto; 
+	}
+* html pre { 
+	padding-bottom: 2em;
+	overflow: visible;
+	overflow-x: auto;
+	}
