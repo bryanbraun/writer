@@ -113,6 +113,11 @@ img {
 	margin: 20px;
 }
 
+a {
+	color: #888888;
+	text-decoration: none;
+}
+
 ul, ol, dl {
 	margin: 1em 0;
 	padding-left: 40px;
@@ -149,10 +154,14 @@ header {
 #site-name {
 	float: left;
 	width: 50%;
+}
+
+#site-name a {
 	font-family: 'Lato', Helvetica, sans-serif;
 	font-size: 1em;
 	color: #888888;
 	text-transform: uppercase;
+	text-decoration: none;
 	font-weight: bold;
 	line-height: 1em;
 }
@@ -184,6 +193,12 @@ nav a {
 	text-decoration: none;
 }
 
+nav a.active {
+	color: #888888;
+	text-decoration: none;
+	border-bottom: 2px solid #888888;
+}
+
 article {
 	position: relative;
 	padding-top: 1px; /* fixes h1 margin bug */
@@ -210,6 +225,15 @@ footer {
 	float: right;
 	width: 100%;
 	padding: 1.62em 0;
+}
+
+.footer-msg {
+	float: left;
+	font-family: 'Lato', Helvetica, sans-serif;
+	font-size: 0.62em;
+	color: #292929;
+	text-transform: uppercase;
+	text-decoration: none;
 }
 
 footer ul {

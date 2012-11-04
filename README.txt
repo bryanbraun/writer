@@ -1,4 +1,4 @@
-Writer - A Blogging Theme For Developers
+Writer - A Drupal Blogging Theme For Developers
 Version: 1.0 
 For Drupal 6
 by Bryan Braun
@@ -7,7 +7,7 @@ http://bryanbraun.com
 [ NOTE: THIS THEME IS UNDER DEVELOPMENT AND DOESN'T CURRENTLY WORK ]
 
 The problem:
-  There are many great drupal developers who continue to use Garland or Bartik (the default Drupal themes) as the theme for their blog. These themes are fine but they were never designed to be used for a blog (not to mention that their overuse has made them tacky). Developers need a blogging theme that is stunningly simple and brings the readers attention to the quality of their writings and their code.
+  There are many great drupal developers who continue to use Garland or Bartik (the default Drupal themes) as the theme for their blog. These themes are fine but they were never designed to be used for a blog (not to mention that their overuse has made them tacky). Developers need a blogging theme that is stunningly simple and brings the reader's attention to the quality of their writings and their code.
 
 The solution:
   Writer - A Blogging Theme For Developers 

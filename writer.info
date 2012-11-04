@@ -7,14 +7,13 @@ description = A minimalist theme designed for a personal blog, with the intentio
 core = 6.x
 engine = phptemplate
 
-stylesheets[all][] = style.css
-stylesheets[all[] = 
-; scripts[]  = script.js ; use this in case we need any scripts
+stylesheets[all][] = css/style.css
+stylesheets[all[] = css/simple-format.css
 
-; no regions are listed, thus this theme will only use the default drupal regions
-; (header, left-sidebar, right-sidebar, content, and footer)
+; our single column theme only has three regions
+regions[content_top] = Content Top
+regions[footer] = Footer
 
-; supports three basic features (still need to set these up), name, slogan, and favicon
+; supports two basic features: name and favicon
 features[] = name
-features[] = slogan
 features[] = favicon
