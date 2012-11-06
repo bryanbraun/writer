@@ -4,7 +4,14 @@ For Drupal 6
 by Bryan Braun
 http://bryanbraun.com
 
-[ NOTE: THIS THEME IS UNDER DEVELOPMENT AND DOESN'T CURRENTLY WORK ]
+NOTE: THIS THEME IS UNDER DEVELOPMENT. HERE ARE THE REMAINING TASKS:
+- Test blocks (block.tpl.php)
+- Put up a demo version online (writer.bryanbraun.com)
+- Test on IE
+- Enable switching on & off of <pre> tag style sheets from the configuration menu
+- Port the theme over to drupal 7
+- Contribute to drupal.org
+- Tell everyone
 
 The problem:
   There are many great drupal developers who continue to use Garland or Bartik (the default Drupal themes) as the theme for their blog. These themes are fine but they were never designed to be used for a blog (not to mention that their overuse has made them tacky). Developers need a blogging theme that is stunningly simple and brings the reader's attention to the quality of their writings and their code.
@@ -19,19 +26,21 @@ This theme was designed using three basic principles:
 
 Design Information:
  - Three-tone color Palette: #F7F7F7, #888888, #292929
- - Fantastic Fonts: Merriweather (titles and body text), Lato (header, footer, and dates), and Inconsolata (code snippets).
- - Deeply incorporates the golden ratio (1:1.62), especially with font and line-height relationships
+ - Three Fantastic Fonts: 
+   - Merriweather - slab serif (titles and body text), by Eben Sorkin
+   - Lato - sans serif (header, footer, and dates), by Lukasz Dziedzic
+   - Inconsolata - monospace (code snippets), by Raph Levien
+ - Use the golden ratio (1:1.62), for font and line-height relationships
  - The design scales nicely on all devices
  - The theme configuration options allows you to choose between styles for how you want your code snippets to display
- - To keep things simple, this theme focuses on CSS and uses no javascript
 
-Writer is intentionally simple. There are only three regions: header, content, and footer.
+Writer is intentionally simple. There are only two regions: content-top, and footer. If you see value in adding more, I'd be happy to get your feedback.
 
 Code Snippet Instructions:
 
   You can use code snippets inline or in blocks. To refer to code inline, wrap the text in <code> tags. Example:
 
-    <p>The great thing about <code>helloWorld()</code> is that it accepts any number of parameters...</p>
+    <p>Use the <code>helloWorld()</code> function for testing.</p>
 
   To refer to code in a block, wrap the text in <pre> tags. Example:
 

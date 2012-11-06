@@ -8,9 +8,11 @@ core = 6.x
 engine = phptemplate
 
 stylesheets[all][] = css/style.css
-stylesheets[all[] = css/simple-format.css
+stylesheets[all][] = css/simple-format.css
+;stylesheets[all][] = css/night-format.css
+;stylesheets[all][] = css/zebra-format.css
 
-; our single column theme only has three regions
+; our single column theme only has two regions
 regions[content_top] = Content Top
 regions[footer] = Footer
 
