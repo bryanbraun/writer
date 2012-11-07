@@ -323,6 +323,10 @@ article p {
 	clear: both;
 }
 
+.bold {
+	font-weight: bold;
+}
+
 /* clearfix technique */
 .clearfix:before,
 .clearfix:after {

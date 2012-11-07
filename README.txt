@@ -5,7 +5,8 @@ by Bryan Braun
 http://bryanbraun.com
 
 NOTE: THIS THEME IS UNDER DEVELOPMENT. HERE ARE THE REMAINING TASKS:
-- Test blocks (block.tpl.php)
+- Fix comment styles
+- Test blocks, taxonomies, and any other core features (even viewss, perhaps)
 - Put up a demo version online (writer.bryanbraun.com)
 - Test on IE
 - Enable switching on & off of <pre> tag style sheets from the configuration menu
