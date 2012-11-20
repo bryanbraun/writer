@@ -1,8 +1,5 @@
-
-; Other possible names: Expert, Clarity, Thinker, Bookworm, Illuminate, Reflections
-
 name = Writer
-description = A minimalist theme designed for a personal blog, with the intention to emphasize incredible text-based content.
+description = A minimalist theme designed for a developer's personal blog, with the intention to emphasize incredible text-based content.
 
 core = 6.x
 engine = phptemplate
@@ -12,10 +9,17 @@ stylesheets[all][] = css/simple-format.css
 ;stylesheets[all][] = css/night-format.css
 ;stylesheets[all][] = css/zebra-format.css
 
-; our single column theme only has two regions
+; Many regions are provided, but use them wisely. Less is more.
+regions[pre_header] = Pre-Header
+regions[header] = Header
+regions[post_header] = Post-Header
 regions[content_top] = Content Top
-regions[footer] = Footer
+regions[content_bottom] = Content Bottom
+regions[footer_top] = Footer Top
+regions[footer_left] = Footer Left
+regions[footer_right] = Footer Right
+regions[footer_bottom] = Footer Bottom
 
-; supports two basic features: name and favicon
+; The Theme supports two basic features: name and favicon
 features[] = name
 features[] = favicon

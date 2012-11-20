@@ -95,7 +95,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	margin: 1em 0;
 	font-weight: 700;
-	line-height: 1em;
+	line-height: 1.2em;
 }
 
 h1 { font-size: 2.62em; } /* = 1.62 * 1.62 */
@@ -156,6 +156,7 @@ blockquote {
 
 section {
 	line-height: 1.62em;
+	padding-top: 1px;
 	position: relative;
 }
 
@@ -164,6 +165,10 @@ section {
 header {
 	width: 100%;
 	padding: 1.62em 0;
+}
+
+.head-wrap {
+	padding: 1em 0;
 }
 
 #site-name {
@@ -178,6 +183,11 @@ header {
 	text-transform: uppercase;
 	text-decoration: none;
 	line-height: 1em;
+}
+
+.comment .submitted {
+  font-size: 0.8em;
+  margin-bottom: 8px;
 }
 
 /* Navigation */
@@ -216,13 +226,11 @@ nav a.active {
 	padding-bottom: 4px;
 }
 
-article {
-	padding-top: 1px; /* fixes h1 margin bug */
-}
-
+/* Content styles */
 .date {
+	display: block;
 	position: absolute;
-	top: 6px;
+	top: 49px;
 	left: -190px;
 	font-family: 'Lato', Helvetica, sans-serif;
 	font-weight: 700;
@@ -234,12 +242,78 @@ article {
 	line-height: 1.2em;
 }
 
+article time.date {
+	top: 70px;
+}
+
 .date-wrap {
+	padding-top: 1px;
 	position: relative;
 }
 
 .date-wrap h2 {
 	margin-bottom: 0;
+}
+
+.item-list ul.pager {
+	font-size: 0.7em;
+	margin-top: 50px;
+}
+
+/* Footer */
+
+footer {
+	float: right; /* ? */
+	width: 100%;
+	padding: 1.62em 0;
+}
+
+#footer_left {
+	float: left;
+	width: 50%;
+}
+#footer_right {
+	float: right;
+	width: 50%;
+}
+
+.footer-msg {
+	float: left;
+	font-family: 'Lato', Helvetica, sans-serif;
+	font-size: 0.62em;
+	color: #292929;
+	text-transform: uppercase;
+	text-decoration: none;
+	width: 49%;
+}
+
+.foot-links {
+	float: right;
+	width: 49%;
+}
+
+.foot-wrap {
+	padding-top: 15px;
+}
+
+.foot-wrap .links ul {
+	margin: 0;
+}
+
+.foot-wrap .links li {
+	list-style-type: none;
+	float: right;
+	padding: 4px 0.5em;
+	line-height: 11px;
+}
+
+.foot-wrap .links a {
+	display: block;
+	font-family: 'Lato', Helvetica, sans-serif;
+	font-size: 0.62em;
+	color: #888888;
+	text-transform: uppercase;
+	text-decoration: none;
 }
 
 /* Adjustments for small devices */
@@ -257,41 +331,18 @@ and (max-width: 750px) {
 
 }
 
-/* Footer */
+@media screen 
+and (max-width: 580px) {
+	#footer_left {
+		float: none;
+		width: 100%;
+	}
 
-footer {
-	float: right;
-	width: 100%;
-	padding: 1.62em 0;
-}
+	#footer_right {
+		float: none;
+		width: 100%;
+	}
 
-.footer-msg {
-	float: left;
-	font-family: 'Lato', Helvetica, sans-serif;
-	font-size: 0.62em;
-	color: #292929;
-	text-transform: uppercase;
-	text-decoration: none;
-}
-
-footer .links ul {
-	margin: 0;
-}
-
-footer .links li {
-	list-style-type: none;
-	float: right;
-	padding: 4px 0.5em;
-	line-height: 11px;
-}
-
-footer .links a {
-	display: block;
-	font-family: 'Lato', Helvetica, sans-serif;
-	font-size: 0.62em;
-	color: #888888;
-	text-transform: uppercase;
-	text-decoration: none;
 }
 
 /* uncomment to try out indented paragraphs 

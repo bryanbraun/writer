@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file node.tpl.php
+ * @file node-story.tpl.php
  *
  * Theme implementation to display a node.
  *
@@ -57,21 +57,22 @@
         <?php endif; ?>
     </div>
   <?php else: ?>
+    <article>
+      <div class="meta">
+        <?php if ($submitted): ?>
+        <time class="submitted date" datetime="<?php print $date_time; ?>"><?php print $clean_date; ?></time>
+        <?php endif; ?>
+      </div>
 
-    <div class="meta">
-      <?php if ($submitted): ?>
-      <time class="submitted date" datetime="<?php print $date_time; ?>"><?php print $clean_date; ?></time>
+      <div class="content">
+        <?php print $content; ?>
+      </div>
+
+      <?php if ($terms): ?>
+        <div class="terms terms-inline"><?php print $terms; ?></div>
       <?php endif; ?>
-    </div>
 
-    <div class="content">
-      <?php print $content; ?>
-    </div>
-
-    <?php if ($terms): ?>
-      <div class="terms terms-inline"><?php print $terms; ?></div>
-    <?php endif; ?>
-
-    <?php print $links; ?>
-  <?php endif; ?>
+      <?php print $links; ?>
+    </article>
+  <?php endif; ?> 
 </div>

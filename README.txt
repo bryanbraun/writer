@@ -5,12 +5,11 @@ by Bryan Braun
 http://bryanbraun.com
 
 NOTE: THIS THEME IS UNDER DEVELOPMENT. HERE ARE THE REMAINING TASKS:
-- Fix comment styles
-- Test blocks, taxonomies, and any other core features (even viewss, perhaps)
-- Put up a demo version online (writer.bryanbraun.com)
+- Theme drupals message output
 - Test on IE
 - Enable switching on & off of <pre> tag style sheets from the configuration menu
-- Port the theme over to drupal 7
+- Port the theme over to Drupal 7
+- Put up a demo version online (writer.bryanbraun.com)
 - Contribute to drupal.org
 - Tell everyone
 
