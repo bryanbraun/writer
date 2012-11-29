@@ -37,7 +37,7 @@ function writer_preprocess_comment(&$vars) {
   // We use Drupal's format_date function to build date formats for the <time> element.
   $date_time = format_date($comment->timestamp, 'custom', 'Y-m-d H:i:s');
   $clean_date = format_date($comment->timestamp, 'custom', 'j M Y');
-  $vars['submitted'] = 'On <time datetime="' . $date_time . '">' . $clean_date . '</time>, ' . $author . 'said...';
+  $vars['submitted'] = 'On <time datetime="' . $date_time . '">' . $clean_date . '</time>, ' . $author . ' said...';
 }
 
 /**

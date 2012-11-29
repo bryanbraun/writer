@@ -5,7 +5,10 @@ by Bryan Braun
 http://bryanbraun.com
 
 NOTE: THIS THEME IS UNDER DEVELOPMENT. HERE ARE THE REMAINING TASKS:
+ - Optimize for minimal set-up, out of the box
+ - Screenshots
  - Port the theme over to Drupal 7
+ - Turn README into a markdown document that's formatted better (D6 and D7)
  - Put up a demo version online (writer.bryanbraun.com)
  - Test on IE
  - Contribute to drupal.org

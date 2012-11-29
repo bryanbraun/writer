@@ -228,6 +228,11 @@ nav a.active {
 	padding-bottom: 4px;
 }
 
+ul.tabs li.active a {
+	background-color: #F7F7F7;
+	border-bottom-color: #F7F7F7;
+}
+
 /* Content styles */
 .date {
 	display: block;

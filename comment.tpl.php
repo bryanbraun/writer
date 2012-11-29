@@ -27,19 +27,19 @@
 ?>
 <div class="comment<?php print ' ' . $status ?> clear-block">
 
-  <h3><?php print $title ?></h3>
+  <h3><?php print $title; ?></h3>
 
   <div class="submitted">
-    <?php print $submitted ?>
+    <?php print $submitted; ?>
   </div>
   <div class="content">
-    <?php print $content ?>
+    <?php print $content; ?>
     <?php if ($signature): ?>
     <div class="user-signature clear-block">
-      <?php print $signature ?>
+      <?php print $signature; ?>
     </div>
     <?php endif; ?>
   </div>
 
-  <?php print $links ?>
+  <?php print $links; ?>
 </div>
