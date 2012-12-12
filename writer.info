@@ -1,7 +1,7 @@
 name = Writer
 description = A minimalist theme designed for a developer's personal blog, with the intention to emphasize incredible text-based content.
 
-core = 6.x
+core = 7.x
 engine = phptemplate
 
 stylesheets[all][] = css/style.css
@@ -10,13 +10,20 @@ stylesheets[all][] = css/style.css
 regions[pre_header] = Pre-Header
 regions[header] = Header
 regions[post_header] = Post-Header
-regions[content_top] = Content Top
-regions[content_bottom] = Content Bottom
+regions[highlighted] = Highlighted
+regions[help] = Help
+regions[content] = Content
 regions[footer_top] = Footer Top
 regions[footer_left] = Footer Left
 regions[footer_right] = Footer Right
 regions[footer_bottom] = Footer Bottom
+regions[footer_message] = Footer Message
 
-; The Theme supports two basic features: name and favicon
+; The Theme supports four basic features
 features[] = name
 features[] = favicon
+features[] = main_menu
+features[] = secondary_menu
+
+; Settings
+settings[code_snippets] = 'simple'

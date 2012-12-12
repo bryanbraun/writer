@@ -4,18 +4,7 @@
  * Set up theme settings for selecting code snippet styles.
  * These settings trigger the conditional loading of stylesheets.
  */
-function writer_settings($saved_settings) {
-  /**
-   * The default values for the theme variables. Make sure $defaults exactly
-   * matches the $defaults in the template.php file.
-   */
-  $defaults = array(
-    'code_snippets' => 'simple',
-  );
-
-  // Merge the saved variables and their default values.
-  $settings = array_merge($defaults, $saved_settings);
-
+function writer_form_system_theme_settings_alter(&$form, &$form_state) {
   // List radio button options.
   $options = array(
     'simple' => t('Simple: A minimalist, light colored code style.'),
@@ -30,8 +19,6 @@ function writer_settings($saved_settings) {
     '#description' => t('Select a style for displaying code snippets.'),
     '#type' => 'radios',
     '#options' => $options,
-    '#default_value' => $settings['code_snippets'],
+    '#default_value' => theme_get_setting('code_snippets'),
   );
-
-  return $form;
 }

@@ -1,5 +1,6 @@
 /**
  * Writer - A theme by Bryan Braun
+ * for Drupal 7
  * http://bryanbraun.com
  *
  * Principles:
@@ -195,7 +196,7 @@ div.messages {
 /* Navigation */
 nav {
 	float: right;
-	width: 48%;
+	max-width: 48%;
 }
 
 nav ul {
@@ -227,10 +228,21 @@ nav a.active {
 	padding-bottom: 4px;
 }
 
+nav h2, .foot-links h2 {
+	/* hide titles of theme menus */
+	display: none;
+}
+
+li a.active {
+	color: #888888;
+	text-decoration: none;
+}
+
 ul.tabs li.active a {
 	background-color: #F7F7F7;
 	border-bottom-color: #F7F7F7;
 }
+
 
 /* Content styles */
 .date {
@@ -266,6 +278,18 @@ article time.date {
 	margin-top: 50px;
 }
 
+.field-type-taxonomy-term-reference {
+	margin-bottom: 1em;
+}
+
+.field-type-taxonomy-term-reference div.field-item {
+	display: inline;
+}
+
+.field-type-taxonomy-term-reference div.field-item a {
+	padding-right: 1em;
+}
+
 /* Footer */
 
 footer {
@@ -284,22 +308,26 @@ footer {
 }
 
 .footer-msg {
-	float: left;
-	font-family: 'Lato', Helvetica, sans-serif;
-	font-size: 0.62em;
 	color: #292929;
-	text-transform: uppercase;
-	text-decoration: none;
-	width: 48%;
+}
+
+.footer-msg h2 {
+	/* Auto-hide the title in the footer message region */
+	display: none;
 }
 
 .foot-links {
 	float: right;
-	width: 48%;
+	margin-left: 15px;
+	max-width: 50%;
 }
 
 .foot-wrap {
 	padding-top: 15px;
+	font-family: 'Lato', Helvetica, sans-serif;
+	font-size: 0.62em;
+	text-transform: uppercase;
+	text-decoration: none;
 }
 
 .foot-wrap .links ul {
@@ -309,17 +337,13 @@ footer {
 .foot-wrap .links li {
 	list-style-type: none;
 	float: left;
-	padding: 4px 0.5em;
+	padding: 0px 0.5em 8px;
 	line-height: 11px;
 }
 
 .foot-wrap .links a {
 	display: block;
-	font-family: 'Lato', Helvetica, sans-serif;
-	font-size: 0.62em;
 	color: #888888;
-	text-transform: uppercase;
-	text-decoration: none;
 }
 
 /* Adjustments for small devices */

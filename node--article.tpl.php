@@ -1,8 +1,9 @@
 <?php
 
 /**
- * @file
- * Default theme implementation to display a node.
+ * @file node--article.tpl.php
+ *
+  * Default theme implementation to display a node.
  *
  * Available variables:
  * - $title: the (sanitized) title of the node.
@@ -83,26 +84,28 @@
   <?php if (!$page): ?>
     <div class="date-wrap">
       <?php print render($title_prefix); ?>
-      <h2<?php print $title_attributes; ?>><a href="<?php print $node_url ?>"><?php print $title; ?></a></h2>
+      <h2<?php print $title_attributes; ?>><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title; ?></a></h2>
       <?php print render($title_suffix); ?>
         <?php if ($submitted): ?>
           <time class="submitted date" datetime="<?php print $date_time; ?>"><?php print $clean_date; ?></time>
         <?php endif; ?>
     </div>
   <?php else: ?>
-    <div class="meta">
-      <?php if ($submitted): ?>
-      <time class="submitted date" datetime="<?php print $date_time; ?>"><?php print $clean_date; ?></time>
-      <?php endif; ?>
-    </div>
-    <div class="content"<?php print $content_attributes; ?>>
-      <?php 
-        hide($content['comments']);
-        hide($content['links']);
-        print render($content); 
-      ?>
-    </div>
-    <?php print render($content['links']); ?>
-    <?php print render($content['comments']); ?>
-  <?php endif; ?>
+    <article>
+      <div class="meta">
+        <?php if ($submitted): ?>
+        <time class="submitted date" datetime="<?php print $date_time; ?>"><?php print $clean_date; ?></time>
+        <?php endif; ?>
+      </div>
+      <div class="content"<?php print $content_attributes; ?>>
+        <?php 
+          hide($content['comments']);
+          hide($content['links']);
+          print render($content); 
+        ?>
+      </div>
+      <?php print render($content['links']); ?>
+      <?php print render($content['comments']); ?>
+    </article>
+  <?php endif; ?> 
 </div>
