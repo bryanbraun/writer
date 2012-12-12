@@ -4,27 +4,14 @@ For Drupal 6
 by Bryan Braun
 http://bryanbraun.com
 
-NOTE: THIS THEME IS UNDER DEVELOPMENT. HERE ARE THE REMAINING TASKS:
- - Optimize for minimal set-up, out of the box
- - Screenshots
- - Port the theme over to Drupal 7
- - Turn README into a markdown document that's formatted better (D6 and D7)
- - Put up a demo version online (writer.bryanbraun.com)
- - Test on IE
- - Contribute to drupal.org
- - Tell everyone
+**Writer is a blogging theme For developers**
 
-The solution:
-  Writer is a blogging theme For developers 
+Writer Demo: [http://writer.bryanbraun.com](http://writer.bryanbraun.com)
 
 This theme was designed using three basic principles:
  - Brutally simple design
  - Fantasitic Typography
  - Support for code snippets
-
-Why?
-
-There are many great drupal developers who continue to use Garland or Bartik (the default Drupal themes) as the theme for their blog. These themes are fine but they were never designed to be used for a blog (not to mention that their overuse has made them tacky). Developers need a blogging theme that is stunningly simple and brings the reader's attention to the quality of their writings and their code.
 
 Design Information:
  - Three-tone color Palette: #F7F7F7, #888888, #292929
@@ -40,12 +27,12 @@ Other Features
  - The theme configuration settings allows you to choose between pre-built styles for how you want your code snippets to display
 
 Code Snippet Instructions:
-  To change the code format, change the setting at /admin/build/themes/settings/writer.
-  You can use code snippets inline or in blocks. To refer to code inline, wrap the text in <code> tags. Example:
+ - To change the code format, change the setting at /admin/build/themes/settings/writer.
+ - You can use code snippets inline or in blocks. To refer to code inline, wrap the text in <code> tags. Example:
 
-    <p>Use the <code>helloWorld()</code> function for testing.</p>
+  Use the <code>helloWorld()</code> function for testing.
 
-  To refer to code in a block, wrap the text in <pre> tags. Example:
+  To refer to code in a block, wrap the text in "<pre>" tags. Example:
 
     <p>Simply add this to the end of the file:</p>
     <pre>
@@ -57,4 +44,4 @@ Code Snippet Instructions:
     }
     </pre>
 
-Finally, this theme also makes it an excellent choice for authors, poets, or anyone else who has killer text-based content that can confidently stand on its own.
+For more information, documentation, and setup tips, visit [http://writer.bryanbraun.com](http://writer.bryanbraun.com)

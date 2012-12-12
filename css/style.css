@@ -162,7 +162,7 @@ header {
 
 #site-name {
 	float: left;
-	width: 50%;
+	width: 48%;
 }
 
 #site-name a {
@@ -195,8 +195,7 @@ div.messages {
 /* Navigation */
 nav {
 	float: right;
-	width: 50%;
-	height: 1em;
+	width: 48%;
 }
 
 nav ul {
@@ -205,7 +204,7 @@ nav ul {
 
 nav li {
 	list-style-type: none;
-	float: right;
+	float: left;
 	padding: 4px 0.5em;
 	line-height: 11px;
 }
@@ -277,11 +276,11 @@ footer {
 
 #footer_left {
 	float: left;
-	width: 50%;
+	width: 49%;
 }
 #footer_right {
 	float: right;
-	width: 50%;
+	width: 49%;
 }
 
 .footer-msg {
@@ -291,12 +290,12 @@ footer {
 	color: #292929;
 	text-transform: uppercase;
 	text-decoration: none;
-	width: 49%;
+	width: 48%;
 }
 
 .foot-links {
 	float: right;
-	width: 49%;
+	width: 48%;
 }
 
 .foot-wrap {
@@ -309,7 +308,7 @@ footer {
 
 .foot-wrap .links li {
 	list-style-type: none;
-	float: right;
+	float: left;
 	padding: 4px 0.5em;
 	line-height: 11px;
 }
