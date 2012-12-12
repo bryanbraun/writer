@@ -4,9 +4,9 @@ For Drupal 6
 by Bryan Braun
 http://bryanbraun.com
 
-**Writer is a blogging theme For developers**
+Writer is a blogging theme For developers
 
-Writer Demo: [http://writer.bryanbraun.com](http://writer.bryanbraun.com)
+Writer Demo: http://writer.bryanbraun.com
 
 This theme was designed using three basic principles:
  - Brutally simple design
@@ -44,4 +44,4 @@ Code Snippet Instructions:
     }
     </pre>
 
-For more information, documentation, and setup tips, visit [http://writer.bryanbraun.com](http://writer.bryanbraun.com)
+For more information, documentation, and setup tips, visit http://writer.bryanbraun.com
