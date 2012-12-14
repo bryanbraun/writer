@@ -99,7 +99,7 @@
       <?php 
         hide($content['comments']);
         hide($content['links']);
-        print render($content); 
+        print render($content);
       ?>
     </div>
     <?php print render($content['links']); ?>

@@ -1,7 +1,14 @@
 <?php
 
 /**
- * Include Google Fonts to each page
+ * @file
+ * Contains preprocess functions for the Writer theme.
+ */
+
+/**
+ * Implements hook_preprocess_html().
+ *
+ * Include CSS for fonts.
  */
 function writer_preprocess_html(&$variables) {
   drupal_add_css(
@@ -11,6 +18,8 @@ function writer_preprocess_html(&$variables) {
 }
 
 /**
+ * Implements hook_preprocess_page().
+ *
  * Turn on styles for code snippets as chosen in the theme settings.
  * To add more options, add the path to the options array below and
  * add the description to the options array in theme-settings.php.
@@ -33,27 +42,26 @@ function writer_preprocess_page(&$variables) {
 }
 
 /**
- * Create cleaner formats for date information on comments.
- * See http://www.whatwg.org/specs/web-apps/current-work/multipage/
- * text-level-semantics.html#the-time-element
+ * Implements hook_preprocess_comment().
+ *
+ * Reformat date info. See http://wiki.whatwg.org/wiki/Time_element.
  */
 function writer_preprocess_comment(&$variables) {
   $comment = $variables['comment'];
   $author = $variables['author'];
-  // We use Drupal's format_date function to build date formats for the <time> element.
+  // Use Drupal's format_date function to reformat dates for the <time> element.
   $date_time = format_date($comment->created, 'custom', 'Y-m-d H:i:s');
   $clean_date = format_date($comment->created, 'custom', 'j M Y');
   $variables['submitted'] = 'On <time datetime="' . $date_time . '">' . $clean_date . '</time>, ' . $author . ' said...';
 }
 
 /**
- * Create cleaner formats for date information on nodes.
- * See http://www.whatwg.org/specs/web-apps/current-work/multipage/
- * text-level-semantics.html#the-time-element
+ * Implements hook_preprocess_comment().
+ *
+ * Reformat date info. See http://wiki.whatwg.org/wiki/Time_element.
  */
 function writer_preprocess_node(&$variables) {
-  // We use Drupal's format_date function to build date formats for the <time> element.
+  // Use Drupal's format_date function to reformat dates for the <time> element.
   $variables['date_time'] = format_date($variables['created'], 'custom', 'Y-m-d H:i:s');
   $variables['clean_date'] = format_date($variables['created'], 'custom', 'j M Y');
 }
-

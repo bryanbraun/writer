@@ -1,9 +1,8 @@
 <?php
 
 /**
- * @file node--article.tpl.php
- *
-  * Default theme implementation to display a node.
+ * @file
+ * Default theme implementation to display a node.
  *
  * Available variables:
  * - $title: the (sanitized) title of the node.
@@ -78,6 +77,7 @@
  * @see template_preprocess_node()
  * @see template_process()
  */
+
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
@@ -101,11 +101,11 @@
         <?php 
           hide($content['comments']);
           hide($content['links']);
-          print render($content); 
+          print render($content);
         ?>
       </div>
       <?php print render($content['links']); ?>
       <?php print render($content['comments']); ?>
     </article>
-  <?php endif; ?> 
+  <?php endif; ?>
 </div>

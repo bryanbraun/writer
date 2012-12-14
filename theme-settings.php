@@ -1,8 +1,13 @@
 <?php
 
 /**
+ * @file
  * Set up theme settings for selecting code snippet styles.
  * These settings trigger the conditional loading of stylesheets.
+ */
+
+/**
+ * Implements hook_form_system_theme_settings_alter().
  */
 function writer_form_system_theme_settings_alter(&$form, &$form_state) {
   // List radio button options.

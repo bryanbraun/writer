@@ -76,7 +76,16 @@
   <header>
   	<div class="head-wrap clearfix">
       <nav>
-        <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Main menu'))); ?>
+        <?php print theme('links__system_main_menu', array(
+          'links' => $main_menu,
+          'attributes' => array(
+            'id' => 'main-menu',
+            'class' => array(
+              'links', 'inline', 'clearfix',
+            ),
+          ),
+          'heading' => t('Main menu'),
+        )); ?>
       </nav>
 	    <div id="site-name">
 	      <a href="<?php print $front_page; ?>"><?php print $site_name; ?></a>
@@ -115,7 +124,16 @@
   	<?php print render($page['footer_bottom']); ?>
   	<div class="foot-wrap clearfix">
       <div class="foot-links">
-    		<?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Secondary menu'))); ?>
+    		<?php print theme('links__system_secondary_menu', array(
+          'links' => $secondary_menu,
+          'attributes' => array(
+            'id' => 'secondary-menu',
+            'class' => array(
+              'links', 'inline', 'clearfix',
+            ),
+          ),
+          'heading' => t('Secondary menu'),
+          )); ?>
     	</div>
       <?php if($page['footer_message']): ?>
         <div class="footer-msg">
