@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file comment.tpl.php
+ * @file
  * Default theme implementation for comments.
  *
  * Available variables:
@@ -24,6 +24,7 @@
  * @see template_preprocess_comment()
  * @see theme_comment()
  */
+
 ?>
 <div class="comment<?php print ' ' . $status ?> clear-block">
 

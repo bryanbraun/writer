@@ -1,14 +1,18 @@
 <?php
 
 /**
+ * @file
  * Set up theme settings for selecting code snippet styles.
+ *
  * These settings trigger the conditional loading of stylesheets.
  */
+
+/**
+ * Implements hook_settings().
+ */
 function writer_settings($saved_settings) {
-  /**
-   * The default values for the theme variables. Make sure $defaults exactly
-   * matches the $defaults in the template.php file.
-   */
+  // The default values for the theme variables. Make sure $defaults exactly
+  // matches the $defaults in the template.php file.
   $defaults = array(
     'code_snippets' => 'simple',
   );

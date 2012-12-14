@@ -1,8 +1,7 @@
 <?php
 
 /**
- * @file node-story.tpl.php
- *
+ * @file
  * Theme implementation to display a node.
  *
  * Available variables:
@@ -46,8 +45,9 @@
  * @see template_preprocess()
  * @see template_preprocess_node()
  */
+
 ?>
-<div id="node-<?php print $node->nid; ?>" class="node<?php if ($sticky) { print ' sticky'; } ?><?php if (!$status) { print ' node-unpublished'; } ?> clear-block">
+<div id="node-<?php print $node->nid; ?>" class="node<?php if ($sticky): print ' sticky'; endif; ?><?php if (!$status): print ' node-unpublished'; endif; ?> clear-block">
 
   <?php if (!$page): ?>
     <div class="date-wrap">

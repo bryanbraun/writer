@@ -28,20 +28,21 @@ Other Features
 
 Code Snippet Instructions:
  - To change the code format, change the setting at /admin/build/themes/settings/writer.
- - You can use code snippets inline or in blocks. To refer to code inline, wrap the text in <code> tags. Example:
+ - You can use code snippets inline or in blocks.
+ - To refer to code inline, wrap the text in <code> tags. Example:
 
   Use the <code>helloWorld()</code> function for testing.
 
-  To refer to code in a block, wrap the text in "<pre>" tags. Example:
+ - To refer to code in a block, wrap the text in "<pre>" tags. Example:
 
-    <p>Simply add this to the end of the file:</p>
-    <pre>
-    var result;
-    if(myVar) {
-      result = myFunction();
-    } else {
-      result = myOtherFunction();  
-    }
-    </pre>
+  <p>Simply add this to the end of the file:</p>
+  <pre>
+  var result;
+  if(myVar) {
+    result = myFunction();
+  } else {
+    result = myOtherFunction();  
+  }
+  </pre>
 
 For more information, documentation, and setup tips, visit http://writer.bryanbraun.com
