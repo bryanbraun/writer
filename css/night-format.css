@@ -1,36 +1,42 @@
-/* 'Night' styling for code examples */
+/**
+ * 'Night' styling for code examples
+ */
+code,
+samp,
+kbd {
+  background-color: #292929;
+  color: #f7f7f7;
+  font-family: "Inconsolata", "Menlo", "Consolas", monospace;
+  font-size: 0.9em;
+  padding: 2px 6px;
+  text-align: left;
+}
 
-code, samp, kbd {
-	background-color: #292929;
-	color: #F7F7F7;	
-	font-family: "Inconsolata", "Menlo", "Consolas", monospace;
-	font-size: 0.9em;
-	text-align: left;
-	padding: 2px 6px;
-	}
+pre,
+pre code {
+  background-color: #292929;
+  border-left: 11px solid #383838;
+  color: #f7f7f7;
+  font-family: "Inconsolata", "Menlo", "Consolas", monospace;
+  font-size: 0.9em;
+  line-height: 1.2em;
+  margin: 1.7em 0 1.7em 0.3em;
+  overflow: auto;
+  padding: 0.5em 0.5em 0.5em 0.7em;
+}
 
-pre, pre code {
-	font-family: "Inconsolata", "Menlo", "Consolas", monospace;
-	font-size: 0.9em;
-	background-color: #292929;
-	color: #F7F7F7;
-	padding: 0.5em 0.5em 0.5em 0.7em;
-	border-left: 11px solid #383838;
-	margin: 1.7em 0 1.7em 0.3em;
-	overflow: auto;
-	line-height: 1.2em;
-	}
-
-/* target IE7 and IE6 */
+/**
+ * target IE7 and IE6
+ */
 *:first-child+html pre {
-	padding-bottom: 2em;
-	overflow-y: hidden;
-	overflow: visible;
-	overflow-x: auto; 
-	}
+  overflow: visible;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 2em;
+}
 
-* html pre { 
-	padding-bottom: 2em;
-	overflow: visible;
-	overflow-x: auto;
-	}
+* html pre {
+  overflow: visible;
+  overflow-x: auto;
+  padding-bottom: 2em;
+}
