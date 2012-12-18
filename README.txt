@@ -1,5 +1,5 @@
 Writer - A Drupal Blogging Theme For Developers
-Version: 1.0 
+Version: 1.0
 For Drupal 7
 by Bryan Braun
 http://bryanbraun.com
@@ -24,11 +24,11 @@ Design Information:
 Other Features
  - Markup is HTML5
  - The design is responsive and scales nicely on all devices
- - The theme configuration settings allows you to choose between pre-built styles for how you want your code snippets to display
+ - Use theme settings to choose pre-built styles for your code snippets
 
 Code Snippet Instructions:
- - To change the code format, change the setting at /admin/build/themes/settings/writer.
- - You can use code snippets inline or in blocks.
+ - Choose a snippet style via the setting at /admin/appearance/settings/writer
+ - You can use code snippets inline or in blocks
  - To refer to code inline, wrap the text in <code> tags. Example:
 
   Use the <code>helloWorld()</code> function for testing.
@@ -45,4 +45,4 @@ Code Snippet Instructions:
   }
   </pre>
 
-For more information, documentation, and setup tips, visit http://writer.bryanbraun.com
+For info, documentation, and setup tips, visit http://writer.bryanbraun.com

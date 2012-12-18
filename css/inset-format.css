@@ -1,48 +1,62 @@
-/* 'Inset' styling for code examples */
+/**
+ * 'Inset' styling for code examples
+ */
 
-code, samp, kbd {
-	border-bottom: 1px solid #FFF;
-	border-radius: 3px;
-	background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.82);
-	box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.1), 0px 1px 7px 0px rgba(0, 0, 0, 0.8) inset;
-	color: #F7F7F7;
-	font-family: "Inconsolata", "Menlo", "Consolas", monospace;
-	font-size: 0.9em;
-	text-align: left;
-	text-shadow: 1px 2px 1px #000;
-	padding: 2px 6px;
-	}
+code,
+samp,
+kbd {
+  background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.82);
+  border-bottom: 1px solid #fff;
+  border-radius: 3px;
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.1), 0px 1px 7px 0px rgba(0, 0, 0, 0.8) inset;
+  color: #f7f7f7;
+  font-family: "Inconsolata", "Menlo", "Consolas", monospace;
+  font-size: 0.9em;
+  padding: 2px 6px;
+  text-align: left;
+  text-shadow: 1px 2px 1px #000;
+}
 
-pre, pre code {
-	font-family: "Inconsolata", "Menlo", "Consolas", monospace;
-	font-size: 0.9em;
-	border-bottom: 1px solid #FFF;
-	border-radius: 3px;
-	background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.82);
-	box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.1), 0px 1px 7px 0px rgba(0, 0, 0, 0.8) inset;
-	color: #F7F7F7;
-	padding: 0.5em 0.5em 0.5em 1em;
-	margin: 1.7em 0 1.7em 0.3em;
-	overflow: auto;
-	line-height: 1.2em;
-	text-shadow: 1px 2px 1px #000;
-	}
+pre,
+pre code {
+  background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.82);
+  border-bottom: 1px solid #fff;
+  border-radius: 3px;
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.1), 0px 1px 7px 0px rgba(0, 0, 0, 0.8) inset;
+  color: #f7f7f7;
+  font-family: "Inconsolata", "Menlo", "Consolas", monospace;
+  font-size: 0.9em;
+  line-height: 1.2em;
+  margin: 1.7em 0 1.7em 0.3em;
+  overflow: auto;
+  padding: 0.5em 0.5em 0.5em 1em;
+  text-shadow: 1px 2px 1px #000;
+}
 
-/* target IE7 and IE6 */
+/**
+ * target IE7 and IE6
+ */
 *:first-child+html pre {
-	padding-bottom: 2em;
-	overflow-y: hidden;
-	overflow: visible;
-	overflow-x: auto; 
-	}
+  overflow: visible;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 2em;
+}
 
-* html pre { 
-	padding-bottom: 2em;
-	overflow: visible;
-	overflow-x: auto;
-	}
+* html pre {
+  overflow: visible;
+  overflow-x: auto;
+  padding-bottom: 2em;
+}
 
-	.inset-panel-dark, .code-block-dark, .dark .advertisement, html.dark code, .mixin-panel-dark, html.dark #search-docs input, html.dark body#home .overview .info-box, html.dark #featured_sites li {
-    box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.1), 0px 1px 7px 0px rgba(0, 0, 0, 0.8) inset;
-    background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.3);
+.inset-panel-dark,
+.code-block-dark,
+.dark .advertisement,
+html.dark code,
+.mixin-panel-dark,
+html.dark #search-docs input,
+html.dark body#home .overview .info-box,
+html.dark #featured_sites li {
+  background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.1), 0px 1px 7px 0px rgba(0, 0, 0, 0.8) inset;
 }
