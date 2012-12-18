@@ -305,7 +305,7 @@ div.messages {
  */
 nav {
   float: right;
-  width: 48%;
+  max-width: 48%;
 }
 nav ul {
   margin: 0;
@@ -394,21 +394,19 @@ footer {
 
 .footer-msg {
   color: #292929;
-  float: left;
-  font-family: 'Lato', Helvetica, sans-serif;
-  font-size: 0.62em;
-  text-decoration: none;
-  text-transform: uppercase;
-  width: 48%;
 }
 
 .foot-links {
   float: right;
-  width: 48%;
+  max-width: 50%;
 }
 
 .foot-wrap {
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-size: 0.62em;
   padding-top: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 .foot-wrap .links ul {
   margin: 0;
@@ -422,10 +420,6 @@ footer {
 .foot-wrap .links a {
   color: #888888;
   display: block;
-  font-family: 'Lato', Helvetica, sans-serif;
-  font-size: 0.62em;
-  text-decoration: none;
-  text-transform: uppercase;
 }
 
 /**
