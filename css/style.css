@@ -412,7 +412,7 @@ article time.date {
  * Footer
  */
 footer {
-  float: right; /* ? */
+  float: right;
   padding: 1.62em 0;
   width: 100%;
 }
@@ -431,7 +431,7 @@ footer {
 }
 
 .footer-msg h2 {
-  display: none; /* Auto-hide the title in the footer message region */
+  display: none; /* Auto-hide any title in the footer message region */
 }
 
 .foot-links {
