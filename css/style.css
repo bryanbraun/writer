@@ -377,7 +377,7 @@ ul.tabs li.active a {
  * Footer
  */
 footer {
-  float: right; /* ? */
+  float: right;
   padding: 1.62em 0;
   width: 100%;
 }

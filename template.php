@@ -38,12 +38,18 @@ function writer_preprocess_page(&$vars) {
  */
 function writer_preprocess_comment(&$vars) {
   $comment = $vars['comment'];
-  $author = $vars['author'];
   // Use Drupal's format_date function to format the html5 <time> element.
   $date_time = format_date($comment->timestamp, 'custom', 'Y-m-d H:i:s');
   $clean_date = format_date($comment->timestamp, 'custom', 'j M Y');
-  $vars['submitted'] = 'On <time datetime="' . $date_time . '">' .
-                        $clean_date . '</time>, ' .  $author . ' said...';
+  // Build a translatable line with clean, html5 date information.
+  $vars['submitted'] = t('On !date_time, @comment_author said...',
+    array(
+      // By passing the <time> tag below, we translate the string without...
+      // ...stripping out the HTML5 tags unrecognized by local_string_is_safe().
+      '!date_time' => '<time datetime="' . $date_time . '">' . $clean_date . '</time>',
+      '@comment_author' => $variables['author'],
+    )
+  );
 }
 
 /**
