@@ -47,7 +47,7 @@ function writer_preprocess_comment(&$vars) {
       // By passing the <time> tag below, we translate the string without...
       // ...stripping out the HTML5 tags unrecognized by local_string_is_safe().
       '!date_time' => '<time datetime="' . $date_time . '">' . $clean_date . '</time>',
-      '@comment_author' => $variables['author'],
+      '@comment_author' => $vars['comment']->name,
     )
   );
 }
