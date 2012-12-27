@@ -15,6 +15,15 @@ function writer_preprocess_html(&$variables) {
     'http://fonts.googleapis.com/css?family=Merriweather:400italic,400,700|Lato|Inconsolata',
     array('type' => 'external')
   );
+  // Set up an array that represents all the properties of our mobile meta tag.
+  $mobile_meta = array(
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'name' => 'viewport',
+      'content' => 'width=device-width'
+    ),
+  );
+  drupal_add_html_head($mobile_meta, 'responsive_meta');
 }
 
 /**
