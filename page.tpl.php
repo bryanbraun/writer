@@ -5,15 +5,20 @@
  */
 
 ?><!DOCTYPE html> 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>">
+<html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>">
 
 <head>
+  <meta name="viewport" content="width=device-width">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
+  <link rel="alternate" type="application/rss+xml" title="" href="rss.xml" />
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400italic,400,700|Lato|Inconsolata' rel='stylesheet' type='text/css'>
   <script type="text/javascript"><?php /* Needed to avoid Flash of Unstyled Content in IE */ ?> </script>
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 </head>
   <body class="<?php print $body_classes; ?>">
   <div id="wrapper">
