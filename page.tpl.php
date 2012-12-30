@@ -73,7 +73,7 @@
 
 <div id="wrapper">
   <?php print render($page['pre_header']); ?>
-  <header>
+  <header id="site-header">
   	<div class="head-wrap clearfix">
       <nav>
         <?php print theme('links__system_main_menu', array(
@@ -83,18 +83,17 @@
             'class' => array(
               'links', 'inline', 'clearfix',
             ),
-          ),
-          'heading' => t('Main menu'),
+          )
         )); ?>
       </nav>
-	    <div id="site-name">
-	      <a href="<?php print $front_page; ?>"><?php print $site_name; ?></a>
-	    </div>
+	    <h1 id="site-name">
+	     <a href="<?php print $front_page; ?>"><?php print $site_name; ?></a>
+	    </h1>
 	  </div>
 	<?php print render($page['header']); ?>
   </header>
   <?php print render($page['post_header']); ?>
-  <section>
+  <section class="main-content">
   	<?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
   	<a id="main-content"></a>
   	<?php print render($title_prefix); ?>
@@ -123,7 +122,7 @@
   	<?php endif; ?>
   	<?php print render($page['footer_bottom']); ?>
   	<div class="foot-wrap clearfix">
-      <div class="foot-links">
+      <nav class="foot-links">
     		<?php print theme('links__system_secondary_menu', array(
           'links' => $secondary_menu,
           'attributes' => array(
@@ -131,10 +130,9 @@
             'class' => array(
               'links', 'inline', 'clearfix',
             ),
-          ),
-          'heading' => t('Secondary menu'),
-          )); ?>
-    	</div>
+          )
+        )); ?>
+    	</nav>
       <?php if($page['footer_message']): ?>
         <div class="footer-msg">
           <?php print render($page['footer_message']); ?>

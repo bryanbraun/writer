@@ -81,20 +81,20 @@
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
-  <?php if (!$page): ?>
-    <div class="date-wrap">
-      <?php print render($title_prefix); ?>
-      <h2<?php print $title_attributes; ?>><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title; ?></a></h2>
-      <?php print render($title_suffix); ?>
+  <article>
+    <?php if (!$page): ?>
+      <div class="date-wrap">
+        <?php print render($title_prefix); ?>
+        <h2<?php print $title_attributes; ?>><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title; ?></a></h2>
+        <?php print render($title_suffix); ?>
         <?php if ($submitted): ?>
-          <time class="submitted date" datetime="<?php print $date_time; ?>"><?php print $clean_date; ?></time>
+          <time class="submitted date" datetime="<?php print $date_time; ?>" pubdate="pubdate"><?php print $clean_date; ?></time>
         <?php endif; ?>
-    </div>
-  <?php else: ?>
-    <article>
+      </div>
+    <?php else: ?>
       <div class="meta">
         <?php if ($submitted): ?>
-        <time class="submitted date" datetime="<?php print $date_time; ?>"><?php print $clean_date; ?></time>
+        <time class="submitted date" datetime="<?php print $date_time; ?>" pubdate="pubdate"><?php print $clean_date; ?></time>
         <?php endif; ?>
       </div>
       <div class="content"<?php print $content_attributes; ?>>
@@ -106,6 +106,6 @@
       </div>
       <?php print render($content['links']); ?>
       <?php print render($content['comments']); ?>
-    </article>
-  <?php endif; ?>
+    <?php endif; ?>
+  </article>
 </div>
