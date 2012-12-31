@@ -84,7 +84,7 @@
               'links', 'inline', 'clearfix',
             ),
           ),
-          'heading' => t('Main menu')
+          'heading' => t('Main menu'),
         )); ?>
       </nav>
 	    <h1 id="site-name">
@@ -132,7 +132,7 @@
               'links', 'inline', 'clearfix',
             ),
           ),
-          'heading' => t('Footer menu')
+          'heading' => t('Footer menu'),
         )); ?>
     	</nav>
       <?php if($page['footer_message']): ?>

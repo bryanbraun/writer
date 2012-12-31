@@ -395,7 +395,7 @@ ul.tabs li.active a {
 }
 
 .date-wrap time.date {
-  top: 49px
+  top: 49px;
 }
 
 .meta time.date {
@@ -414,7 +414,7 @@ ul.tabs li.active a {
 .main-content img {
   height: auto;
   margin: 20px;
-  max-width: 100%;
+  max-width: 95%;
   width: auto;
 }
 

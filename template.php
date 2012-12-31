@@ -20,7 +20,7 @@ function writer_preprocess_html(&$variables) {
     '#tag' => 'meta',
     '#attributes' => array(
       'name' => 'viewport',
-      'content' => 'width=device-width'
+      'content' => 'width=device-width',
     ),
   );
   drupal_add_html_head($mobile_meta, 'responsive_meta');
