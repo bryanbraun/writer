@@ -207,8 +207,11 @@ p {
   margin-bottom: 1em;
 }
 
-img {
-  margin: 20px;
+.main-content img {
+  height: auto;
+  margin: 10px;
+  max-width: 95%;
+  width: auto;
 }
 
 a {
@@ -260,7 +263,7 @@ section {
 /**
  * Specific Styles
  */
-header {
+#site-header {
   padding: 1.62em 0;
   width: 100%;
 }
@@ -270,7 +273,12 @@ header {
 }
 
 #site-name {
+  display: block;
   float: left;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1em;
+  margin: 0px;
   width: 48%;
 }
 #site-name a {
@@ -289,6 +297,26 @@ header {
 .comment .submitted {
   font-size: 0.8em;
   margin-bottom: 8px;
+}
+
+#comments h2 {
+  font-size: 1.62em;
+}
+
+#comments h3 {
+  font-size: 1.3em;
+}
+
+#comments h4 {
+  font-size: 1.2em;
+}
+
+#comments h5 {
+  font-size: 1.1em;
+}
+
+#comments .filter-wrapper {
+  font-size: 0.8em;
 }
 
 div.messages {
@@ -326,7 +354,12 @@ nav a {
   text-decoration: none;
   text-transform: uppercase;
 }
-nav a.active {
+nav h2 {
+  /* hide titles of theme menus */
+  display: none;
+}
+
+.head-wrap nav a.active {
   border-bottom: 2px solid #888888;
   color: #888888;
   padding-bottom: 4px;
@@ -346,7 +379,6 @@ ul.tabs li.active a {
   display: block;
   font-family: 'Lato', Helvetica, sans-serif;
   font-weight: 700;
-  height: 2.62em;
   left: -190px;
   line-height: 1.2em;
   position: absolute;
@@ -356,14 +388,19 @@ ul.tabs li.active a {
   width: 150px;
 }
 
-/**
- * article time.date {
- * }
- */
+.date-wrap time.date {
+  top: 49px;
+}
+
+meta time.date {
+  top: 70px;
+}
+
 .date-wrap {
   padding-top: 1px;
   position: relative;
 }
+
 .date-wrap h2 {
   margin-bottom: 0;
 }
@@ -420,6 +457,7 @@ footer {
 .foot-wrap .links a {
   color: #888888;
   display: block;
+  font-size: 1em;
 }
 
 /**
@@ -429,6 +467,14 @@ footer {
   .date {
     position: static;
     text-align: left;
+  }
+
+  .meta time.date {
+    padding-bottom: 1.62em;
+  }
+
+  .main-content > h1 {
+    margin-bottom: 10px;
   }
 
   #wrapper {

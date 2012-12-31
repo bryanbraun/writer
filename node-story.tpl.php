@@ -48,19 +48,18 @@
 
 ?>
 <div id="node-<?php print $node->nid; ?>" class="node<?php if ($sticky): print ' sticky'; endif; ?><?php if (!$status): print ' node-unpublished'; endif; ?> clear-block">
-
-  <?php if (!$page): ?>
-    <div class="date-wrap">
-      <h2><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title; ?></a></h2>
+  <article>
+    <?php if (!$page): ?>
+      <div class="date-wrap">
+        <h2><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title; ?></a></h2>
         <?php if ($submitted): ?>
-          <time class="submitted date" datetime="<?php print $date_time; ?>"><?php print $clean_date; ?></time>
+          <time class="submitted date" datetime="<?php print $date_time; ?>" pubdate="pubdate"><?php print $clean_date; ?></time>
         <?php endif; ?>
-    </div>
-  <?php else: ?>
-    <article>
+      </div>
+    <?php else: ?>
       <div class="meta">
         <?php if ($submitted): ?>
-        <time class="submitted date" datetime="<?php print $date_time; ?>"><?php print $clean_date; ?></time>
+          <time class="submitted date" datetime="<?php print $date_time; ?>" pubdate="pubdate"><?php print $clean_date; ?></time>
         <?php endif; ?>
       </div>
 
@@ -73,6 +72,6 @@
       <?php endif; ?>
 
       <?php print $links; ?>
-    </article>
-  <?php endif; ?> 
+    <?php endif; ?> 
+  </article>
 </div>

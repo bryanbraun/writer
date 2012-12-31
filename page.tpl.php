@@ -23,19 +23,20 @@
   <body class="<?php print $body_classes; ?>">
   <div id="wrapper">
     <?php print $pre_header; ?>
-    <header>
+    <header id="site-header">
       <div class="head-wrap clearfix">
-      <div id="site-name">
-        <a href="<?php print $front_page; ?>"><?php print $site_name; ?></a>
+        <h1 id="site-name">
+          <a href="<?php print $front_page; ?>"><?php print $site_name; ?></a>
+        </h1>
+        <nav>
+          <h2>Main Menu</h2>
+          <?php print theme('links', $primary_links, array('class' => 'links primary-links')); ?>
+        </nav>
       </div>
-      <nav>
-        <?php print theme('links', $primary_links, array('class' => 'links primary-links')); ?>
-      </nav>
-    </div>
-    <?php print $header; ?>
+      <?php print $header; ?>
     </header>
     <?php print $post_header; ?>
-    <section>
+    <section class="main-content">
       <?php if (!empty($title)): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
         <?php if (!empty($tabs)): ?><div class="tabs"><?php print $tabs; ?></div><?php endif; ?>
         <?php if (!empty($messages)): print $messages; endif; ?>
@@ -62,9 +63,10 @@
         <?php endif; ?>
       <?php print $footer_bottom; ?>
       <div class="foot-wrap clearfix">
-         <div class="foot-links">
+         <nav class="foot-links">
+           <h2>Footer Menu</h2> 
            <?php print theme('links', $secondary_links, array('class' => 'links secondary-links')); ?>
-         </div>
+         </nav>
         <div class="footer-msg">
           <?php print $footer_message; ?>
         </div>
