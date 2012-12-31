@@ -355,18 +355,18 @@ nav a {
   text-transform: uppercase;
 }
 
-nav a.active {
+.head-wrap nav a.active {
   border-bottom: 2px solid #888888;
   color: #888888;
   padding-bottom: 4px;
   text-decoration: none;
 }
-/*
-nav h2,
-.foot-links h2 {
+
+nav h2 {
+  /* Hide titles of theme menus */
   display: none;
 }
-*/
+
 li a.active {
   color: #888888;
   text-decoration: none;

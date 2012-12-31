@@ -83,7 +83,8 @@
             'class' => array(
               'links', 'inline', 'clearfix',
             ),
-          )
+          ),
+          'heading' => t('Main menu')
         )); ?>
       </nav>
 	    <h1 id="site-name">
@@ -130,7 +131,8 @@
             'class' => array(
               'links', 'inline', 'clearfix',
             ),
-          )
+          ),
+          'heading' => t('Footer menu')
         )); ?>
     	</nav>
       <?php if($page['footer_message']): ?>
