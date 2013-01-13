@@ -249,7 +249,7 @@ blockquote {
 #wrapper {
   font-size: 1.25em;
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 630px;
   padding: 0 0 0 180px;
 }
 
@@ -495,7 +495,7 @@ footer {
 /**
  * Adjustments for small devices
  */
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 780px) {
   .date {
     position: static;
     text-align: left;
@@ -527,6 +527,84 @@ footer {
   #footer_right {
     float: none;
     width: 100%;
+  }
+
+  /* Return to default font size and spacing (w/ exceptions) */
+  #wrapper {
+    font-size: 1em;
+  }
+
+  .head-wrap {
+    font-size: 1.25em;
+  }
+  footer .foot-wrap {
+    font-size: 0.75em;
+  }
+
+  /* Styles for responsive mobile menu */
+  #site-name {
+    width: 100%;
+    text-align: center;
+  }
+
+  #main-nav {
+    /* moves the menu below */ 
+    max-width: 100%;
+    padding-top: 20px;
+    width: 100%;
+  }
+
+  #main-nav > h2 {
+    /* Styles for toggle button */
+    border: 1px solid #aaa;
+    color: #888;
+    display: block;
+    font-family: 'Lato', Helvetica, sans-serif;
+    font-size: 0.62em;
+    margin: 0px 0px -1px;
+    padding: 14px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  #main-menu {
+    display: none;
+  }
+  
+  #main-menu li {
+    /* make wide rectangular box */
+    -moz-box-sizing; border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    margin-bottom: -1px;
+    padding: 0px;
+    width: 100%;
+  }
+
+  #main-menu li a {
+    /* aligns text in box */
+    display: block;
+    padding: 14px;
+    margin: 0px;
+    text-align: center;
+  }
+
+  #menu-arrow {
+    /* Style menu arrow. */
+    float: right;
+    width: 12px;
+    height: 12px;
+    background: url('../img/dropdown-arrows.png') -10px -13px no-repeat;
+  }
+
+  #menu-arrow.menu-open {
+    background: url('../img/dropdown-arrows.png') -10px -2px no-repeat;
+  }
+
+  .head-wrap nav a.active {
+    /* removed default link underlining */
+    border-bottom: none;
   }
 }
 

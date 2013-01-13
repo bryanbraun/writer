@@ -5,6 +5,7 @@ core = 7.x
 engine = phptemplate
 
 stylesheets[all][] = css/style.css
+scripts[] = js/script.js 
 
 ; Many regions are provided, but use them wisely. Less is more.
 regions[pre_header] = Pre-Header

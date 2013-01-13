@@ -75,7 +75,10 @@
   <?php print render($page['pre_header']); ?>
   <header id="site-header">
   	<div class="head-wrap clearfix">
-      <nav>
+	    <h1 id="site-name">
+	     <a href="<?php print $front_page; ?>"><?php print $site_name; ?></a>
+	    </h1>
+      <nav id="main-nav">
         <?php print theme('links__system_main_menu', array(
           'links' => $main_menu,
           'attributes' => array(
@@ -87,9 +90,6 @@
           'heading' => t('Main menu'),
         )); ?>
       </nav>
-	    <h1 id="site-name">
-	     <a href="<?php print $front_page; ?>"><?php print $site_name; ?></a>
-	    </h1>
 	  </div>
 	<?php print render($page['header']); ?>
   </header>
