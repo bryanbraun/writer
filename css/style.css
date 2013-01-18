@@ -325,6 +325,10 @@ div.messages {
   border: 1px solid #4a77a3;
 }
 
+ul.primary {
+  font-size: 0.9em;
+}
+
 /**
  * Navigation
  */
@@ -506,7 +510,7 @@ footer {
   }
 
   .main-content > h1 {
-    margin-bottom: 10px;
+    margin: 10px 0px;
   }
 
   #site-header {
@@ -519,6 +523,13 @@ footer {
 }
 
 @media screen and (max-width: 580px) {
+  /* Resize standard text input fields for mobile */
+  input:not([type]),
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+  }
+
   #footer_left {
     float: none;
     width: 100%;
@@ -543,12 +554,12 @@ footer {
 
   /* Styles for responsive mobile menu */
   #site-name {
-    width: 100%;
     text-align: center;
+    width: 100%;
   }
 
   #main-nav {
-    /* moves the menu below */ 
+    /* moves the menu below */
     max-width: 100%;
     padding-top: 20px;
     width: 100%;
@@ -556,27 +567,32 @@ footer {
 
   #main-nav > h2 {
     /* Styles for toggle button */
-    border: 1px solid #aaa;
     color: #888;
     display: block;
     font-family: 'Lato', Helvetica, sans-serif;
     font-size: 0.62em;
+    font-weight: normal;
     margin: 0px 0px -1px;
     padding: 14px;
     text-align: center;
     text-transform: uppercase;
   }
-  
-  #main-menu {
+
+  .js #main-menu {
+    /* if js is enabled, toggle will work */
     display: none;
   }
   
+  #main-menu {
+    /* if js is not enabled, show menu */
+    display: block;
+  }
+
   #main-menu li {
     /* make wide rectangular box */
-    -moz-box-sizing; border-box;
+    -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    border: 1px solid #aaa;
     margin-bottom: -1px;
     padding: 0px;
     width: 100%;
@@ -585,21 +601,20 @@ footer {
   #main-menu li a {
     /* aligns text in box */
     display: block;
-    padding: 14px;
     margin: 0px;
+    padding: 14px;
     text-align: center;
   }
 
   #menu-arrow {
     /* Style menu arrow. */
-    float: right;
-    width: 12px;
+    background: url('../img/dropdown-arrows.png') 2px -13px no-repeat;
     height: 12px;
-    background: url('../img/dropdown-arrows.png') -10px -13px no-repeat;
+    padding-right: 24px;
   }
 
   #menu-arrow.menu-open {
-    background: url('../img/dropdown-arrows.png') -10px -2px no-repeat;
+    background: url('../img/dropdown-arrows.png') 2px 0px no-repeat;
   }
 
   .head-wrap nav a.active {
