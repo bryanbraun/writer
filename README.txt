@@ -1,5 +1,5 @@
 Writer - A Drupal Blogging Theme For Developers
-Version: 1.0
+Version: 1.1
 For Drupal 7
 by Bryan Braun
 http://bryanbraun.com

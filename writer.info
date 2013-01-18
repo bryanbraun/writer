@@ -1,5 +1,5 @@
 name = Writer
-description = A minimalist theme designed for a developer's personal blog, with the intention to emphasize incredible text-based content.
+description = A minimalist theme designed for a developer's personal blog.
 
 core = 7.x
 engine = phptemplate
