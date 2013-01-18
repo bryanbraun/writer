@@ -510,11 +510,7 @@ footer {
   }
 
   .main-content > h1 {
-    margin: 10px 0px;
-  }
-
-  #site-header {
-    padding: 0px;
+    margin: 25px 0px;
   }
 
   #wrapper {
@@ -554,6 +550,10 @@ footer {
   }
 
   /* Styles for responsive mobile menu */
+  #site-header {
+    padding: 0px;
+  }
+
   #site-name {
     text-align: center;
     width: 100%;
