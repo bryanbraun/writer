@@ -527,7 +527,7 @@ footer {
   input:not([type]),
   input[type="text"],
   input[type="password"] {
-    width: 100%;
+    width: 90%;
   }
 
   #footer_left {
@@ -547,6 +547,7 @@ footer {
 
   .head-wrap {
     font-size: 1.25em;
+    padding: 1em 0px 0px;
   }
   footer .foot-wrap {
     font-size: 0.75em;
