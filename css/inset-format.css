@@ -1,6 +1,7 @@
 /**
  * 'Inset' styling for code examples
  */
+
 code,
 samp,
 kbd {
@@ -16,8 +17,7 @@ kbd {
   text-shadow: 1px 2px 1px #000;
 }
 
-pre,
-pre code {
+pre {
   background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.82);
   border-bottom: 1px solid #fff;
   border-radius: 3px;
@@ -30,6 +30,17 @@ pre code {
   overflow: auto;
   padding: 0.5em 0.5em 0.5em 1em;
   text-shadow: 1px 2px 1px #000;
+}
+
+/**
+ * Override 'code' css rules if using 'pre > code' markup.
+ */
+pre > code {
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-size: 1em;
+  padding: 0px;
 }
 
 /**
@@ -46,16 +57,4 @@ pre code {
   overflow: visible;
   overflow-x: auto;
   padding-bottom: 2em;
-}
-
-.inset-panel-dark,
-.code-block-dark,
-.dark .advertisement,
-html.dark code,
-.mixin-panel-dark,
-html.dark #search-docs input,
-html.dark body#home .overview .info-box,
-html.dark #featured_sites li {
-  background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.1), 0px 1px 7px 0px rgba(0, 0, 0, 0.8) inset;
 }
