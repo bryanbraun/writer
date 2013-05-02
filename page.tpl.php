@@ -94,6 +94,7 @@
 	<?php print render($page['header']); ?>
   </header>
   <?php print render($page['post_header']); ?>
+  <?php print $messages; ?>
   <section class="main-content">
   	<?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
   	<a id="main-content"></a>

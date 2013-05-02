@@ -11,11 +11,12 @@
  * Include CSS for fonts.
  */
 function writer_preprocess_html(&$variables) {
+  // Add css for our fonts.
   drupal_add_css(
     'http://fonts.googleapis.com/css?family=Merriweather:400italic,400,700|Lato|Inconsolata',
     array('type' => 'external')
   );
-  // Set up an array that represents all the properties of our mobile meta tag.
+  // Set up and include our mobile meta tag.
   $mobile_meta = array(
     '#tag' => 'meta',
     '#attributes' => array(
@@ -24,6 +25,8 @@ function writer_preprocess_html(&$variables) {
     ),
   );
   drupal_add_html_head($mobile_meta, 'responsive_meta');
+  // Add a theme-specific css class to the body tag.
+  $variables['classes_array'][] = 'writer';
 }
 
 /**

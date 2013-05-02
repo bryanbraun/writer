@@ -246,6 +246,18 @@ blockquote {
   margin-left: 1.94em;
 }
 
+table {
+  width: 100%;
+  margin: 1em 0;
+}
+
+th,
+td {
+  border: solid 1px #ccc;
+  padding: 5px 11px;
+  vertical-align: top;
+}
+
 #wrapper {
   font-size: 1.25em;
   margin: 0 auto;
@@ -317,7 +329,7 @@ section {
 }
 
 div.messages {
-  padding: 0 6px;
+  line-height: 1.25;
 }
 
 .status {
@@ -437,6 +449,11 @@ ul.tabs li.active a {
 
 .field-type-taxonomy-term-reference div.field-item a {
   padding-right: 1em;
+}
+
+.field-name-body {
+  border-bottom: 1px solid transparent;
+  margin-bottom: 1em;
 }
 
 /**
