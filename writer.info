@@ -5,7 +5,8 @@ core = 7.x
 engine = phptemplate
 
 stylesheets[all][] = css/style.css
-scripts[] = js/script.js 
+scripts[] = js/script.js
+scripts[] = js/fastclick.js
 
 ; Many regions are provided, but use them wisely. Less is more.
 regions[pre_header] = Pre-Header
@@ -21,6 +22,7 @@ regions[footer_bottom] = Footer Bottom
 regions[footer_message] = Footer Message
 
 ; The Theme supports four basic features
+features[] = logo
 features[] = name
 features[] = favicon
 features[] = main_menu
@@ -28,3 +30,8 @@ features[] = secondary_menu
 
 ; Settings
 settings[code_snippets] = 'simple'
+settings[toggle_logo] = 0
+settings[toggle_name] = 1
+settings[toggle_main_menu] = 1
+settings[toggle_secondary_menu] = 1
+

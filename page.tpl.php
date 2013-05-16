@@ -71,10 +71,17 @@
  */
 ?>
 
-<div id="wrapper">
+<div id="wrapper" class="<?php print $wrapper_classes; ?>">
   <?php print render($page['pre_header']); ?>
   <header id="site-header">
   	<div class="head-wrap clearfix">
+      <?php if ($logo): ?>
+        <div class="logo-wrap">
+          <a href="<?php print $front_page; ?>" rel="home" id="logo">
+            <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+          </a>
+        </div>
+      <?php endif; ?>
 	    <h1 id="site-name">
 	     <a href="<?php print $front_page; ?>"><?php print $site_name; ?></a>
 	    </h1>
@@ -96,7 +103,7 @@
   <?php print render($page['post_header']); ?>
   <?php print $messages; ?>
   <section class="main-content">
-  	<?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
+    <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
   	<a id="main-content"></a>
   	<?php print render($title_prefix); ?>
     <?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
@@ -106,7 +113,7 @@
     <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
     <?php print render($page['content']); ?>
   </section>
-  <footer>
+  <footer class="page-footer">
   	<?php print render($page['footer_top']); ?>
   	<?php if($page['footer_left'] || $page['footer_right']): ?>
   	  <div class="foot-mid-wrap clearfix">

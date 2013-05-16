@@ -2,7 +2,7 @@
  * Run Javascript for the mobile collapse menu.
  */
 jQuery(document).ready(function($){
-  // Add the .js class if JS is enabled. CSS rules can use this. 
+  // Add the .js class if JS is enabled. CSS rules can use this.
   $('body').addClass('js');
 
   // Add in the arrow element.
@@ -20,4 +20,9 @@ jQuery(document).ready(function($){
       $('#main-menu').attr('style','');
     };
   });
+
+  // Initialize fastclick for mobile devices.
+  window.addEventListener('load', function() {
+    FastClick.attach(document.body);
+  }, false);
 });

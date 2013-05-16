@@ -186,27 +186,27 @@ h6 {
 }
 
 h1 {
-  font-size: 2.62em;
+  font-size: 2.6em; /* 20px * 2.6 = 52px */
 }
 
 h2 {
-  font-size: 1.94em;
+  font-size: 1.9em; /* 20px * 1.9 = 38px */
 }
 
 h3 {
-  font-size: 1.62em;
+  font-size: 1.6em; /* 20px * 1.6 = 32px */
 }
 
 h4 {
-  font-size: 1.4em;
+  font-size: 1.4em; /* 20px * 1.4 = 28px */
 }
 
 h5 {
-  font-size: 1.2em;
+  font-size: 1.2em; /* 20px * 1.2 = 24px */
 }
 
 h6 {
-  font-size: 1em;
+  font-size: 1em; /* 20px * 1 = 20px */
 }
 
 p {
@@ -247,8 +247,8 @@ blockquote {
 }
 
 table {
-  width: 100%;
   margin: 1em 0;
+  width: 100%;
 }
 
 th,
@@ -259,16 +259,17 @@ td {
 }
 
 #wrapper {
-  font-size: 1.25em;
+  font-size: 1.25em; /* 16px * 1.25 = 20px */
   margin: 0 auto;
   max-width: 630px;
   padding: 0 0 0 180px;
 }
+#wrapper.no_submission_info {
+  padding: 0;
+}
 
 section {
   line-height: 1.62em;
-  padding-top: 1px;
-  position: relative;
 }
 
 /**
@@ -280,7 +281,12 @@ section {
 }
 
 .head-wrap {
-  padding: 1em 0;
+  padding: 16px 0;
+}
+
+.logo-wrap {
+  left: 0;
+  position: absolute;
 }
 
 #site-name {
@@ -312,7 +318,7 @@ section {
 }
 
 #comments h2 {
-  font-size: 1.62em;
+  font-size: 1.6em;
 }
 #comments h3 {
   font-size: 1.3em;
@@ -396,7 +402,7 @@ ul.tabs li.active a {
 /**
  * Content styles
  */
-.date {
+.writer-date {
   color: #888888;
   display: block;
   font-family: 'Lato', Helvetica, sans-serif;
@@ -406,24 +412,24 @@ ul.tabs li.active a {
   position: absolute;
   text-align: right;
   text-transform: uppercase;
-  top: 49px;
+  top: 11px;
   width: 150px;
 }
 
-.date-wrap time.date {
-  top: 49px;
-}
-
-.meta time.date {
-  top: 70px;
-}
-
-.date-wrap {
-  padding-top: 1px;
+.main-content {
   position: relative;
 }
 
-.date-wrap h2 {
+.not-page {
+  position: relative;
+}
+
+.not-page .links {
+  font-size: .85em;
+}
+
+.not-page .field-name-body {
+  border-bottom: none;
   margin-bottom: 0;
 }
 
@@ -459,7 +465,7 @@ ul.tabs li.active a {
 /**
  * Footer
  */
-footer {
+.page-footer {
   float: right;
   padding: 1.62em 0;
   width: 100%;
@@ -516,13 +522,23 @@ footer {
 /**
  * Adjustments for small devices
  */
-@media screen and (max-width: 780px) {
-  .date {
+@media screen and (max-width: 800px) {
+  #site-header {
+    padding: 0px;
+  }
+
+  .logo-wrap {
+    margin-bottom: 16px;
+    position: static;
+    width: 100%;
+  }
+
+  .writer-date {
     position: static;
     text-align: left;
   }
 
-  .meta time.date {
+  .meta time.writer-date {
     padding-bottom: 1.62em;
   }
 
@@ -530,8 +546,8 @@ footer {
     margin: 25px 0px;
   }
 
-  #wrapper {
-    padding: 0 15px;
+  .writer #wrapper {
+    padding: 0 16px;
   }
 }
 
@@ -562,20 +578,26 @@ footer {
     font-size: 1.25em;
     padding: 1em 0px 0px;
   }
-  footer .foot-wrap {
+
+  .page-footer .foot-wrap {
     font-size: 0.75em;
   }
 
-  /* Styles for responsive mobile menu */
-  #site-header {
-    padding: 0px;
-  }
-
+  /* Minor layout changes */
   #site-name {
     text-align: center;
     width: 100%;
   }
 
+  .logo-wrap {
+    text-align: center;
+  }
+
+  .page-footer {
+    padding: 16px 0 0;
+  }
+
+  /* Styles for responsive mobile menu */
   #main-nav {
     /* moves the menu below */
     max-width: 100%;
@@ -600,7 +622,7 @@ footer {
     /* if js is enabled, toggle will work */
     display: none;
   }
-  
+
   #main-menu {
     /* if js is not enabled, show menu */
     display: block;

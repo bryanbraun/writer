@@ -51,6 +51,21 @@ function writer_preprocess_page(&$variables) {
   if (file_exists($path_to_format)) {
     drupal_add_css($path_to_format, array('group' => CSS_THEME, 'type' => 'file'));
   }
+
+  $wrapper_classes = array();
+
+  // If this page is displaying a node, find whether the submission information
+  // (date submitted) will be displayed, so we can add a class to the wrapper.
+  if (isset($variables['node'])) {
+    if (variable_get('node_submitted_' . $variables['node']->type, TRUE)) {
+      // Submission info is displayed for this node.
+    }
+    else {
+      // No submission info is displayed for this node.
+      $wrapper_classes[] = 'no_submission_info';
+    }
+  }
+  $variables['wrapper_classes'] = implode(' ', $wrapper_classes);
 }
 
 /**
