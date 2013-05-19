@@ -16,7 +16,17 @@ function writer_preprocess_html(&$variables) {
     'http://fonts.googleapis.com/css?family=Merriweather:400italic,400,700|Lato|Inconsolata',
     array('type' => 'external')
   );
-  // Set up and include our mobile meta tag.
+
+  // Set up meta tags.
+  // Modern IE & chrome-frame rendering engine tag.
+  $rendering_meta = array(
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'http-equiv' => 'X-UA-Compatible',
+      'content' => 'IE=edge,chrome=1',
+    ),  
+  );
+  // Mobile viewport tag.
   $mobile_meta = array(
     '#tag' => 'meta',
     '#attributes' => array(
@@ -24,7 +34,10 @@ function writer_preprocess_html(&$variables) {
       'content' => 'width=device-width',
     ),
   );
+ // Include meta tags.
+  drupal_add_html_head($rendering_meta, 'rendering_meta');
   drupal_add_html_head($mobile_meta, 'responsive_meta');
+
   // Add a theme-specific css class to the body tag.
   $variables['classes_array'][] = 'writer';
 }
