@@ -103,7 +103,7 @@ function writer_preprocess_comment(&$variables) {
 }
 
 /**
- * Implements hook_preprocess_comment().
+ * Implements hook_preprocess_node().
  *
  * Reformat date info. See http://wiki.whatwg.org/wiki/Time_element.
  */

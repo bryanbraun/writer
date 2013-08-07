@@ -247,6 +247,13 @@ ol li {
   list-style-type: decimal;
 }
 
+body.writer ul li,
+body.writer ol li,
+body.writer dl dt, {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
 blockquote {
   font-style: italic;
   margin-left: 1.94em;
@@ -412,6 +419,10 @@ li a.active {
 ul.tabs li.active a {
   background-color: #f7f7f7;
   border-bottom-color: #f7f7f7;
+}
+
+#main-nav li {
+padding: 0 0.5em;
 }
 
 /**
