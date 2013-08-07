@@ -249,7 +249,7 @@ ol li {
 
 body.writer ul li,
 body.writer ol li,
-body.writer dl dt, {
+body.writer dl dt {
   padding-top: 5px;
   padding-bottom: 5px;
 }
