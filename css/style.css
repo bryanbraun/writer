@@ -283,11 +283,12 @@ td {
 #wrapper {
   font-size: 1.25em; /* 16px * 1.25 = 20px */
   margin: 0 auto;
-  max-width: 630px;
   padding: 0 0 0 180px;
+  /* default width -- will be overridden if alternative inline rule is specified */
+  max-width: 630px;
 }
 #wrapper.no_submission_info {
-  padding: 0;
+  padding: 0 100px;
 }
 
 section {
@@ -311,14 +312,17 @@ section {
   position: absolute;
 }
 
+.site-name-wrap {
+  float: left;
+  width: 48%;  
+}
+
 #site-name {
   display: block;
-  float: left;
   font-size: 1em;
   font-weight: normal;
   line-height: 1em;
   margin: 0px;
-  width: 48%;
 }
 
 #site-name a {
@@ -328,6 +332,15 @@ section {
   line-height: 1em;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+#site-slogan {
+  color: #888888;
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-size: 0.62em;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 0;
 }
 
 .comment p {
@@ -610,7 +623,7 @@ padding: 0 0.5em;
   }
 
   /* Minor layout changes */
-  #site-name {
+  .site-name-wrap {
     text-align: center;
     width: 100%;
   }

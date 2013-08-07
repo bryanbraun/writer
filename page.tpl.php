@@ -71,7 +71,7 @@
  */
 ?>
 
-<div id="wrapper" class="<?php print $wrapper_classes; ?>">
+<div id="wrapper" class="<?php print $wrapper_classes; ?>" <?php print $content_width_rule ?>>
   <?php print render($page['pre_header']); ?>
   <header id="site-header">
   	<div class="head-wrap clearfix">
@@ -82,9 +82,18 @@
           </a>
         </div>
       <?php endif; ?>
-	    <h1 id="site-name">
-	     <a href="<?php print $front_page; ?>"><?php print $site_name; ?></a>
-	    </h1>
+      <?php if ($site_name || $site_slogan): ?>
+        <hgroup class="site-name-wrap">
+          <?php if ($site_name): ?>
+    	      <h1 id="site-name">
+    	        <a href="<?php print $front_page; ?>"><?php print $site_name; ?></a>
+    	      </h1>
+          <?php endif; ?>
+          <?php if ($site_slogan): ?>
+            <h2 id="site-slogan"><?php print $site_slogan; ?></h2>
+          <?php endif; ?>
+        </hgroup>
+      <?php endif; ?>
       <nav id="main-nav">
         <?php print theme('links__system_main_menu', array(
           'links' => $main_menu,

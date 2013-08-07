@@ -26,4 +26,12 @@ function writer_form_system_theme_settings_alter(&$form, &$form_state) {
     '#options' => $options,
     '#default_value' => theme_get_setting('code_snippets'),
   );
+
+  // Define an optional width setting.
+  $form['content_width'] = array(
+    '#title' => t('Define content width (px)'),
+    '#description' => t('If you do not like the default content width (630px), you can adjust it by specifying the preferred width in px. Note that extra-wide content areas are less readable.'),
+    '#type' => 'textfield',
+    '#default_value' => theme_get_setting('content_width'),
+  );
 }

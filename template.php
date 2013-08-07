@@ -44,31 +44,39 @@ function writer_preprocess_html(&$variables) {
 
 /**
  * Implements hook_preprocess_page().
- *
- * Turn on styles for code snippets as chosen in the theme settings.
- * To add more options, add the path to the options array below and
- * add the description to the options array in theme-settings.php.
  */
 function writer_preprocess_page(&$variables) {
-  // Build an associative array of all stylesheet options and filepaths.
+
+  // Turn on styles for code snippets as chosen in the theme settings.
+  // To add more options, add the path to the options array below and
+  // add the description to the options array in theme-settings.php.
   $options = array(
     'simple' => '/css/simple-format.css',
     'night' => '/css/night-format.css',
     'inset' => '/css/inset-format.css',
     'zebra' => '/css/zebra-format.css',
   );
+
   // Find the value in the theme settings and use it to build a filepath.
   $my_format = theme_get_setting('code_snippets');
   $path_to_format = drupal_get_path('theme', 'writer') . $options[$my_format];
+
   // If the css file exists, run it on the current page.
   if (file_exists($path_to_format)) {
     drupal_add_css($path_to_format, array('group' => CSS_THEME, 'type' => 'file'));
   }
 
-  $wrapper_classes = array();
+  // Pull the value from theme settings to define the default content width.
+  $content_width = check_plain(theme_get_setting('content_width'));
+  // Build the style attribute, and store in a template variable.
+  $content_width_rule = 'style="max-width: ' . $content_width . 'px;"';
+  $variables['content_width_rule'] = $content_width_rule;
+
 
   // If this page is displaying a node, find whether the submission information
   // (date submitted) will be displayed, so we can add a class to the wrapper.
+  $wrapper_classes = array();
+
   if (isset($variables['node'])) {
     if (variable_get('node_submitted_' . $variables['node']->type, TRUE)) {
       // Submission info is displayed for this node.
