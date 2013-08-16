@@ -63,7 +63,7 @@ function writer_preprocess_page(&$variables) {
 
   // If the css file exists, run it on the current page.
   if (file_exists($path_to_format)) {
-    drupal_add_css($path_to_format, array('group' => CSS_THEME, 'type' => 'file'));
+    drupal_add_css($path_to_format, array('group' => CSS_AGGREGATE_THEME, 'type' => 'file'));
   }
 
   // Pull the value from theme settings to define the default content width.
@@ -89,26 +89,27 @@ function writer_preprocess_page(&$variables) {
   $variables['wrapper_classes'] = implode(' ', $wrapper_classes);
 }
 
-/**
+/*
  * Implements hook_preprocess_comment().
  *
  * Reformat date info. See http://wiki.whatwg.org/wiki/Time_element.
+
+    function writer_preprocess_comment(&$variables) {
+      $comment = $variables['comment'];
+      // Use Drupal's format_date function to reformat dates for the <time> element.
+      $date_time = format_date($comment->created, 'custom', 'Y-m-d H:i:s');
+      $clean_date = format_date($comment->created, 'custom', 'j M Y');
+      // Build a translatable line with clean, html5 date information.
+      $variables['submitted'] = t('On !date_time, @comment_author said...',
+        array(
+          // By passing the <time> tag below, we translate the string without...
+          // ...stripping out the HTML5 tags unrecognized by local_string_is_safe().
+          '!date_time' => '<time datetime="' . $date_time . '">' . $clean_date . '</time>',
+          '@comment_author' => $variables['comment']->name,
+        )
+      );
+    }
  */
-function writer_preprocess_comment(&$variables) {
-  $comment = $variables['comment'];
-  // Use Drupal's format_date function to reformat dates for the <time> element.
-  $date_time = format_date($comment->created, 'custom', 'Y-m-d H:i:s');
-  $clean_date = format_date($comment->created, 'custom', 'j M Y');
-  // Build a translatable line with clean, html5 date information.
-  $variables['submitted'] = t('On !date_time, @comment_author said...',
-    array(
-      // By passing the <time> tag below, we translate the string without...
-      // ...stripping out the HTML5 tags unrecognized by local_string_is_safe().
-      '!date_time' => '<time datetime="' . $date_time . '">' . $clean_date . '</time>',
-      '@comment_author' => $variables['comment']->name,
-    )
-  );
-}
 
 /**
  * Implements hook_preprocess_node().
@@ -117,6 +118,6 @@ function writer_preprocess_comment(&$variables) {
  */
 function writer_preprocess_node(&$variables) {
   // Use Drupal's format_date function to reformat dates for the <time> element.
-  $variables['date_time'] = format_date($variables['created'], 'custom', 'Y-m-d H:i:s');
-  $variables['clean_date'] = format_date($variables['created'], 'custom', 'j M Y');
+  $variables['date_time'] = format_date($variables['node']->created, 'custom', 'Y-m-d H:i:s');
+  $variables['clean_date'] = format_date($variables['node']->created, 'custom', 'j M Y');
 }

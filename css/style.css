@@ -291,8 +291,8 @@ td {
   padding: 0 100px;
 }
 
-section {
-  line-height: 1.62em;
+.main-content {
+  line-height: 1.62;
 }
 
 /**
@@ -385,23 +385,23 @@ ul.primary {
 /**
  * Navigation
  */
-nav {
+.main-nav {
   float: right;
   max-width: 48%;
 }
 
-nav ul {
+.main-nav ul {
   margin: 0;
 }
 
-nav li {
+.main-nav li {
   float: left;
   line-height: 11px;
   list-style-type: none;
   padding: 4px 0.5em;
 }
 
-nav a {
+.main-nav a {
   color: #888888;
   display: block;
   font-family: 'Lato', Helvetica, sans-serif;
@@ -412,7 +412,7 @@ nav a {
   text-transform: uppercase;
 }
 
-.head-wrap nav a.active {
+.head-wrap .main-nav a.active {
   border-bottom: 2px solid #888888;
   color: #888888;
   padding-bottom: 4px;
@@ -420,7 +420,7 @@ nav a {
 }
 
 nav h2 {
-  /* Hide titles of theme menus */
+  /* Hide titles of theme menus. These are displayed at some screen sizes. */
   display: none;
 }
 
@@ -696,7 +696,7 @@ padding: 0 0.5em;
     background: url('../img/dropdown-arrows.png') 2px 0px no-repeat;
   }
 
-  .head-wrap nav a.active {
+  .head-wrap .main-nav a.active {
     /* removed default link underlining */
     border-bottom: none;
   }
@@ -715,7 +715,7 @@ padding: 0 0.5em;
  */
 
 /**
- * reusable classes
+ * helper classes
  */
 .hide {
   display: none;
