@@ -23,15 +23,16 @@ regions:
   footer_right: 'Footer Right'
   footer_bottom: 'Footer Bottom'
   footer_message: 'Footer Message'
-#features:
-#  features[] = logo
-#  features[] = name
-#  features[] = slogan
-#  features[] = favicon
-#  features[] = main_menu
-#  features[] = secondary_menu
+features:
+  - logo
+  - name
+  - slogan
+  - favicon
+  - main_menu
+  - secondary_menu
 settings:
   code_snippets: 'simple'
+  content_width: '630'
   toggle_logo: '0'
   toggle_slogan: '0'
   toggle_name: '1'

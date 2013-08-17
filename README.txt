@@ -1,6 +1,6 @@
 Writer - A Drupal Blogging Theme For Developers
 Version: 2.2
-For Drupal 7
+For Drupal 8
 by Bryan Braun
 http://bryanbraun.com
 
@@ -21,8 +21,7 @@ Design Information:
    - Inconsolata - monospace (code snippets), by Raph Levien
 
 Other Features
- - Markup is HTML5
  - The design is responsive and scales nicely on all devices
- - Use theme settings to choose pre-built styles for your code snippets
+ - Use theme settings to choose pre-built styles for your code snippets, or define content area width.
 
 For info, documentation, and setup tips, visit http://writer.bryanbraun.com
