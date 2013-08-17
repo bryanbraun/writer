@@ -77,25 +77,39 @@
  * @ingroup themeable
  */
 #}
-<article id="node-{{ node.nid }}" class="{{ attributes.class }} {% if not page %} not-page {% endif %} clearfix"{{ attributes }}>
+<article id="node-{{ node.nid }}" class="{{ attributes.class }} {% if not page %} not-page {% endif %}"{{ attributes }}>
 
-  {% if not page %}
-    {{ title_prefix }}
-    <h2{{ title_attributes }}>
-      <a href="{{ node_url }}">{{ label }}</a>
-    </h2>
-    {{ title_suffix }}
-  {% endif %}
+  {% if display_submitted %}
     <div class="meta">
-      {% if display_submitted %}
-        <time class="submitted writer-date" datetime="{{ date_time }}">{{clean_date }}</time>
-      {% endif %}
+      <time class="submitted writer-date" datetime="{{ date_time }}" pubdate="pubdate">{{clean_date }}</time>
     </div>
-    <div class="content"<?php print $content_attributes; ?>>
+  {% endif %}
+
+  <div class="node-main contextual-region">
+    <header>
+      {{ title_prefix }}
+      {% if not page %}
+        <h2{{ title_attributes }}>
+          <a href="{{ node_url }}" rel="bookmark">{{ label }}</a>
+        </h2>
+      {% endif %}
+      {{ title_suffix }}
+
+    </header>
+
+    <div {{ content_attributes }}>
+      {# We hide the comments and links now so that we can render them later. #}
       {% hide(content.comments) %}
       {% hide(content.links) %}
       {{ content }}
     </div>
-    {{ content.links }}
+
+    {% if content.links %}
+      <footer class="link-wrapper">
+        {{ content.links }}
+      </footer>
+    {% endif %}
+
     {{ content.comments }}
-</div>
+  </div>
+</article>

@@ -39,7 +39,7 @@ function writer_preprocess_html(&$variables) {
   drupal_add_html_head($mobile_meta, 'responsive_meta');
 
   // Add a theme-specific css class to the body tag.
-  $variables['classes_array'][] = 'writer';
+  $variables['attributes']['class'][] = 'writer';
 }
 
 /**
@@ -67,7 +67,7 @@ function writer_preprocess_page(&$variables) {
   }
 
   // Pull the value from theme settings to define the default content width.
-  $content_width = check_plain(theme_get_setting('content_width'));
+  $content_width = check_plain(theme_get_setting('content_width', 'writer'));
   // Build the style attribute, and store in a template variable.
   $content_width_rule = 'style="max-width: ' . $content_width . 'px;"';
   $variables['content_width_rule'] = $content_width_rule;

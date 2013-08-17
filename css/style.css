@@ -254,6 +254,11 @@ body.writer dl dt {
   padding-bottom: 5px;
 }
 
+body.writer .krumo-root li {
+  /* correct padding on debugging lists */
+  padding: 0;
+}
+
 blockquote {
   font-style: italic;
   margin-left: 1.94em;
@@ -455,11 +460,15 @@ padding: 0 0.5em;
   width: 150px;
 }
 
-.main-content {
+.node.contextual-region {
+  position: static;
+}
+
+.node.not-page {
   position: relative;
 }
 
-.not-page {
+.main-content {
   position: relative;
 }
 
@@ -471,6 +480,13 @@ padding: 0 0.5em;
   border-bottom: none;
   margin-bottom: 0;
 }
+
+/*
+.contextual-region {
+   overrides default for easier positioning of date & contextual links 
+  position: static;
+}
+*/
 
 .main-content img {
   height: auto;
@@ -585,7 +601,7 @@ padding: 0 0.5em;
     margin: 25px 0px;
   }
 
-  .writer #wrapper {
+  #wrapper {
     padding: 0 16px;
   }
 }
@@ -731,10 +747,6 @@ padding: 0 0.5em;
 
 .clear {
   clear: both;
-}
-
-.bold {
-  font-weight: bold;
 }
 
 /**
