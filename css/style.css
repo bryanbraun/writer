@@ -170,8 +170,14 @@ table {
  */
 html {
   overflow-y: scroll;
-  /* maxvoltar.com/archive/-webkit-font-smoothing */
-  -webkit-font-smoothing: antialiased;
+  /**
+   * -webkit-font-smoothing: antialiased;
+   *
+   * Enable this to test out webkit antilaliased font smoothing.
+   * I'm choosing to leave it off by default, for now.
+   *
+   * Read more at: http://maxvoltar.com/archive/-webkit-font-smoothing
+   */
 }
 
 body {
@@ -327,7 +333,7 @@ td {
   font-size: 1em;
   font-weight: normal;
   line-height: 1em;
-  margin: 0px;
+  margin: 0;
 }
 
 #site-name a {
@@ -481,13 +487,6 @@ padding: 0 0.5em;
   margin-bottom: 0;
 }
 
-/*
-.contextual-region {
-   overrides default for easier positioning of date & contextual links 
-  position: static;
-}
-*/
-
 .main-content img {
   height: auto;
   margin: 20px;
@@ -565,7 +564,7 @@ padding: 0 0.5em;
   float: left;
   line-height: 11px;
   list-style-type: none;
-  padding: 0px 0.5em 8px;
+  padding: 0 0.5em 8px;
 }
 
 .foot-wrap .links a {
@@ -574,12 +573,17 @@ padding: 0 0.5em;
   font-size: 1em;
 }
 
+.contextual-links a {
+  /* Prevents above style from affecting contextual link menus. */
+  text-transform: none;
+}
+
 /**
  * Adjustments for small devices
  */
 @media screen and (max-width: 800px) {
   #site-header {
-    padding: 0px;
+    padding: 0;
   }
 
   .logo-wrap {
@@ -598,7 +602,7 @@ padding: 0 0.5em;
   }
 
   .main-content > h1 {
-    margin: 25px 0px;
+    margin: 25px 0;
   }
 
   #wrapper {
@@ -631,7 +635,7 @@ padding: 0 0.5em;
 
   .head-wrap {
     font-size: 1.25em;
-    padding: 1em 0px 0px;
+    padding: 1em 0 0;
   }
 
   .page-footer .foot-wrap {
@@ -653,50 +657,54 @@ padding: 0 0.5em;
   }
 
   /* Styles for responsive mobile menu */
-  #main-nav {
+  .main-nav {
     /* moves the menu below */
     max-width: 100%;
     padding-top: 20px;
     width: 100%;
   }
 
-  #main-nav > h2 {
+  .main-nav > h2 {
     /* Styles for toggle button */
     color: #888;
     display: block;
     font-family: 'Lato', Helvetica, sans-serif;
     font-size: 0.62em;
     font-weight: normal;
-    margin: 0px 0px -1px;
+    margin: 0 0 -1px;
     padding: 14px;
     text-align: center;
     text-transform: uppercase;
+    /* for overriding 'visually hidden' applied by core */
+    position: static !important;
+    width: 100%;
+    height: 14px;
   }
 
-  .js #main-menu {
+  .js .main-nav ul {
     /* if js is enabled, toggle will work */
     display: none;
   }
 
-  #main-menu {
+  .main-nav ul {
     /* if js is not enabled, show menu */
     display: block;
   }
 
-  #main-menu li {
+  .main-nav ul li {
     /* make wide rectangular box */
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin-bottom: -1px;
-    padding: 0px;
+    padding: 0;
     width: 100%;
   }
 
-  #main-menu li a {
+  .main-nav ul li a {
     /* aligns text in box */
     display: block;
-    margin: 0px;
+    margin: 0;
     padding: 14px;
     text-align: center;
   }
@@ -709,7 +717,7 @@ padding: 0 0.5em;
   }
 
   #menu-arrow.menu-open {
-    background: url('../img/dropdown-arrows.png') 2px 0px no-repeat;
+    background: url('../img/dropdown-arrows.png') 2px 0 no-repeat;
   }
 
   .head-wrap .main-nav a.active {
@@ -721,12 +729,12 @@ padding: 0 0.5em;
 /**
  * uncomment to try out indented paragraphs
  * article p:first-of-type {
- *   text-indent: 0px;
+ *   text-indent: 0;
  * }
  *
  * article p {
  *   text-indent: 1.5em;
- *   margin: 0px;
+ *   margin: 0;
  * }
  */
 

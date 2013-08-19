@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Writers theme implementation for comments.
+ * Writer's theme implementation for comments.
  * 
  * Differences from default implementation:
  * - Does not display the "new" comment flag.
@@ -82,8 +82,6 @@
     <p class="parent visually-hidden">{{ parent }}</p>
   {% endif %}
 
-  {{ permalink }}
-
   <div{{ content_attributes }}>
     {# We hide the links now so that we can render them later. #}
     {% hide(content.links) %}
@@ -91,7 +89,7 @@
 
     {% if signature %}
       <div class="user-signature">
-        {{ signature }}
+        {# {{ signature }} #}
       </div>
     {% endif %}
 

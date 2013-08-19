@@ -79,23 +79,26 @@
 #}
 <article id="node-{{ node.nid }}" class="{{ attributes.class }} {% if not page %} not-page {% endif %}"{{ attributes }}>
 
-  {% if display_submitted %}
-    <div class="meta">
-      <time class="submitted writer-date" datetime="{{ date_time }}" pubdate="pubdate">{{clean_date }}</time>
-    </div>
-  {% endif %}
+  <header>
+    {{ title_prefix }}
+
+    {% if not page %}
+      <h2{{ title_attributes }}>
+        <a href="{{ node_url }}" rel="bookmark">{{ label }}</a>
+      </h2>
+    {% endif %}
+
+    {% if display_submitted %}
+      <div class="meta">
+        <time class="submitted writer-date" datetime="{{ date_time }}" pubdate="pubdate">{{clean_date }}</time>
+      </div>
+    {% endif %}
+
+  </header>
 
   <div class="node-main contextual-region">
-    <header>
-      {{ title_prefix }}
-      {% if not page %}
-        <h2{{ title_attributes }}>
-          <a href="{{ node_url }}" rel="bookmark">{{ label }}</a>
-        </h2>
-      {% endif %}
-      {{ title_suffix }}
-
-    </header>
+    
+    {{ title_suffix }}
 
     <div {{ content_attributes }}>
       {# We hide the comments and links now so that we can render them later. #}

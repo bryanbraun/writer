@@ -93,23 +93,35 @@ function writer_preprocess_page(&$variables) {
  * Implements hook_preprocess_comment().
  *
  * Reformat date info. See http://wiki.whatwg.org/wiki/Time_element.
-
+ */
     function writer_preprocess_comment(&$variables) {
-      $comment = $variables['comment'];
-      // Use Drupal's format_date function to reformat dates for the <time> element.
-      $date_time = format_date($comment->created, 'custom', 'Y-m-d H:i:s');
-      $clean_date = format_date($comment->created, 'custom', 'j M Y');
+
+      /* 
+        dpm($variables); // Enable devel module to use this for debugging.
+
+        // Use Drupal's format_date function to reformat dates for the <time> element.
+        // I cannot find Unix timestamps in D8 $variables, so we'll leave this for now.
+        
+        $date_time = format_date($variables['created'], 'custom', 'Y-m-d H:i:s');
+        $clean_date = format_date($variables['created'], 'custom', 'j M Y');
+        $date_string = '<time datetime="' . $date_time . '">' . $clean_date . '</time>';
+      */
+
+      $substitute_date_string = $variables['created'];
+      $permahash = str_replace('Permalink', '#', $variables['permalink']);
+
       // Build a translatable line with clean, html5 date information.
-      $variables['submitted'] = t('On !date_time, @comment_author said...',
-        array(
+      $variables['submitted'] = $permahash . ' ' . t('On !date_time, !comment_author said...', array(
           // By passing the <time> tag below, we translate the string without...
           // ...stripping out the HTML5 tags unrecognized by local_string_is_safe().
-          '!date_time' => '<time datetime="' . $date_time . '">' . $clean_date . '</time>',
-          '@comment_author' => $variables['comment']->name,
+          '!date_time' => $substitute_date_string,
+          '!comment_author' => $variables['author'],
         )
       );
+       
+
     }
- */
+
 
 /**
  * Implements hook_preprocess_node().

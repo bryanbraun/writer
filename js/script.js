@@ -3,19 +3,19 @@
  */
 jQuery(document).ready(function($){
   // Add in the arrow element.
-  $('#main-nav > h2').append('<span id="menu-arrow"></span>');
+  $('.main-nav > h2').append('<span id="menu-arrow"></span>');
 
   // Turn on the menu listener.
-  $('#main-nav > h2').click(function() {
+  $('.main-nav > h2').click(function() {
     $('#menu-arrow').toggleClass('menu-open');
-    $('#main-menu').slideToggle('fast');
+    $('.main-nav ul').slideToggle('fast');
   });
 
   // Solve the disappearing menu bug.
   $(window).resize(function() {
     if ($(window).width() <= 580) {
-      $('#main-menu').attr('style','');
-    };
+      $('.main-nav ul').attr('style','');
+    }
   });
 
   // Initialize fastclick for mobile devices.
