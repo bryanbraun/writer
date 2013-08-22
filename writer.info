@@ -31,9 +31,9 @@ features[] = secondary_menu
 
 ; Settings
 settings[code_snippets] = 'simple'
+settings[content_width] = '630'
 settings[toggle_logo] = 0
 settings[toggle_slogan] = 0
 settings[toggle_name] = 1
 settings[toggle_main_menu] = 1
 settings[toggle_secondary_menu] = 1
-

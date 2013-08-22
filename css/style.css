@@ -322,7 +322,7 @@ section {
   font-size: 1em;
   font-weight: normal;
   line-height: 1em;
-  margin: 0px;
+  margin: 0;
 }
 
 #site-name a {
@@ -496,9 +496,12 @@ padding: 0 0.5em;
   padding-right: 1em;
 }
 
+.field {
+  margin-bottom: 1em;
+}
+
 .field-name-body {
   border-bottom: 1px solid transparent;
-  margin-bottom: 1em;
 }
 
 /**
@@ -549,7 +552,7 @@ padding: 0 0.5em;
   float: left;
   line-height: 11px;
   list-style-type: none;
-  padding: 0px 0.5em 8px;
+  padding: 0 0.5em 8px;
 }
 
 .foot-wrap .links a {
@@ -563,7 +566,7 @@ padding: 0 0.5em;
  */
 @media screen and (max-width: 800px) {
   #site-header {
-    padding: 0px;
+    padding: 0;
   }
 
   .logo-wrap {
@@ -582,7 +585,7 @@ padding: 0 0.5em;
   }
 
   .main-content > h1 {
-    margin: 25px 0px;
+    margin: 25px 0;
   }
 
   .writer #wrapper {
@@ -615,7 +618,7 @@ padding: 0 0.5em;
 
   .head-wrap {
     font-size: 1.25em;
-    padding: 1em 0px 0px;
+    padding: 1em 0 0;
   }
 
   .page-footer .foot-wrap {
@@ -651,7 +654,7 @@ padding: 0 0.5em;
     font-family: 'Lato', Helvetica, sans-serif;
     font-size: 0.62em;
     font-weight: normal;
-    margin: 0px 0px -1px;
+    margin: 0 0 -1px;
     padding: 14px;
     text-align: center;
     text-transform: uppercase;
@@ -673,14 +676,14 @@ padding: 0 0.5em;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin-bottom: -1px;
-    padding: 0px;
+    padding: 0;
     width: 100%;
   }
 
   #main-menu li a {
     /* aligns text in box */
     display: block;
-    margin: 0px;
+    margin: 0;
     padding: 14px;
     text-align: center;
   }
@@ -693,7 +696,7 @@ padding: 0 0.5em;
   }
 
   #menu-arrow.menu-open {
-    background: url('../img/dropdown-arrows.png') 2px 0px no-repeat;
+    background: url('../img/dropdown-arrows.png') 2px 0 no-repeat;
   }
 
   .head-wrap nav a.active {
@@ -705,12 +708,12 @@ padding: 0 0.5em;
 /**
  * uncomment to try out indented paragraphs
  * article p:first-of-type {
- *   text-indent: 0px;
+ *   text-indent: 0;
  * }
  *
  * article p {
  *   text-indent: 1.5em;
- *   margin: 0px;
+ *   margin: 0;
  * }
  */
 

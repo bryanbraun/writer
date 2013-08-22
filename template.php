@@ -24,7 +24,7 @@ function writer_preprocess_html(&$variables) {
     '#attributes' => array(
       'http-equiv' => 'X-UA-Compatible',
       'content' => 'IE=edge,chrome=1',
-    ),  
+    ),
   );
   // Mobile viewport tag.
   $mobile_meta = array(
@@ -34,7 +34,7 @@ function writer_preprocess_html(&$variables) {
       'content' => 'width=device-width',
     ),
   );
- // Include meta tags.
+  // Include meta tags.
   drupal_add_html_head($rendering_meta, 'rendering_meta');
   drupal_add_html_head($mobile_meta, 'responsive_meta');
 
