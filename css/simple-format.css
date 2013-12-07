@@ -21,7 +21,7 @@ pre {
 * Override 'code' css rules if using 'pre > code' markup.
 */
 pre > code {
-  padding: 0px;
+  padding: 0;
 }
 
 /**

@@ -499,8 +499,12 @@ padding: 0 0.5em;
   margin-top: 50px;
 }
 
-.field-type-taxonomy-term-reference {
+.field {
   margin-bottom: 1em;
+}
+
+.field-name-body {
+  border-bottom: 1px solid transparent;
 }
 
 .field-type-taxonomy-term-reference div.field-item {
@@ -511,10 +515,6 @@ padding: 0 0.5em;
   padding-right: 1em;
 }
 
-.field-name-body {
-  border-bottom: 1px solid transparent;
-  margin-bottom: 1em;
-}
 
 /**
  * Footer
@@ -536,6 +536,7 @@ padding: 0 0.5em;
 
 .footer-msg {
   color: #292929;
+  width: 50%;
 }
 
 .footer-msg h2 {
@@ -672,7 +673,7 @@ padding: 0 0.5em;
     font-size: 0.62em;
     font-weight: normal;
     margin: 0 0 -1px;
-    padding: 14px;
+    padding: 14px 0;
     text-align: center;
     text-transform: uppercase;
     /* for overriding 'visually hidden' applied by core */
@@ -689,6 +690,7 @@ padding: 0 0.5em;
   .main-nav ul {
     /* if js is not enabled, show menu */
     display: block;
+    padding: 0;
   }
 
   .main-nav ul li {
@@ -723,6 +725,7 @@ padding: 0 0.5em;
   .head-wrap .main-nav a.active {
     /* removed default link underlining */
     border-bottom: none;
+    padding-bottom: 14px;
   }
 }
 
