@@ -77,7 +77,8 @@
  * @ingroup themeable
  */
 #}
-<article id="node-{{ node.nid }}" class="{{ attributes.class }} {% if not page %} not-page {% endif %}"{{ attributes }}>
+
+<article id="node-{{ node.id }}" class="{{ attributes.class }} {% if not page %} not-page {% endif %}"{{ attributes }} >
 
   <header>
     {{ title_prefix }}
@@ -115,4 +116,5 @@
 
     {{ content.comments }}
   </div>
+
 </article>
