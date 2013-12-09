@@ -354,6 +354,46 @@ td {
   margin-bottom: 0;
 }
 
+#block-writer-search {
+  margin: 1em 0;
+  zoom: 1;
+}
+
+#block-writer-search:before,
+#block-writer-search:after {
+  content: "";
+  display: table;
+}
+
+#block-writer-search:after {
+  clear: both;
+}
+
+#block-writer-search h2 {
+  display: none;
+}
+
+#block-writer-search input {
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-size: 0.62em;
+}
+
+#block-writer-search .form-submit {
+  background: none;
+  border: 1px solid #aaa;
+  color: #888;
+  text-transform: uppercase;
+  padding-bottom: 2px;
+}
+
+.form-item-search-block-form input {
+  width: 220px;
+}
+
+#search-block-form > div {
+  float: right;
+}
+
 .comment p {
   font-size: 0.9em;
 }
@@ -585,6 +625,19 @@ padding: 0 0.5em;
 @media screen and (max-width: 800px) {
   #site-header {
     padding: 0;
+  }
+
+  #search-block-form {
+    text-align: center;
+  }
+
+  #search-block-form > div {
+    float: none;
+    display: inline;
+  }
+
+  .form-item-search-block-form input {
+    width: 150px;
   }
 
   .logo-wrap {
