@@ -343,6 +343,47 @@ section {
   margin-bottom: 0;
 }
 
+#block-search-form {
+  margin: 1em 0;
+  zoom: 1;
+}
+
+#block-search-form:before,
+#block-search-form:after {
+  content: "";
+  display: table;
+}
+
+#block-search-form:after {
+  clear: both;
+}
+
+#block-search-form h2 {
+  display: none;
+}
+
+#block-search-form input {
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-size: 0.62em;
+}
+
+#block-search-form .form-submit {
+  background: none;
+  border: 1px solid #aaa;
+  color: #888;
+  text-transform: uppercase;
+  padding-bottom: 2px;
+  cursor: pointer;
+}
+
+.form-item-search-block-form input {
+  width: 220px;
+}
+
+#search-block-form > div {
+  float: right;
+}
+
 .comment p {
   font-size: 0.9em;
 }
@@ -575,6 +616,19 @@ padding: 0 0.5em;
     width: 100%;
   }
 
+  #search-block-form {
+    text-align: center;
+  }
+
+  #search-block-form > div {
+    float: none;
+    display: inline;
+  }
+
+  .form-item-search-block-form input {
+    width: 150px;
+  }
+
   .writer-date {
     position: static;
     text-align: left;
@@ -599,6 +653,10 @@ padding: 0 0.5em;
   input[type="text"],
   input[type="password"] {
     width: 90%;
+  }
+
+  .form-item-search-block-form input {
+    width: 150px;
   }
 
   #footer_left {
