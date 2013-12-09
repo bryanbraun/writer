@@ -384,6 +384,7 @@ td {
   color: #888;
   text-transform: uppercase;
   padding-bottom: 2px;
+  cursor: pointer;
 }
 
 .form-item-search-block-form input {
