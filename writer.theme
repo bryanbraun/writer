@@ -11,12 +11,6 @@
  * Include CSS for fonts.
  */
 function writer_preprocess_html(&$variables) {
-  // Add css for our fonts.
-  drupal_add_css(
-    'http://fonts.googleapis.com/css?family=Merriweather:400italic,400,700|Lato|Inconsolata&subset=latin,latin-ext',
-    array('type' => 'external')
-  );
-
   // Set up meta tags.
   // Modern IE & chrome-frame rendering engine tag.
   $rendering_meta = array(
@@ -62,8 +56,12 @@ function writer_preprocess_page(&$variables) {
 
   // If the css file exists, run it on the current page.
   if (file_exists($path_to_format)) {
-    drupal_add_css($path_to_format, array('group' => CSS_AGGREGATE_THEME, 'type' => 'file'));
+    $variables['page']['#attached']['css'][][$path_to_format] = array();
   }
+
+  // Add css for our fonts.
+  $font_css_url = 'http://fonts.googleapis.com/css?family=Merriweather:400italic,400,700|Lato|Inconsolata&subset=latin,latin-ext';
+  $variables['page']['#attached']['css'][][$font_css_url] = array('type' => 'external');
 
   // Pull the value from theme settings to define the default content width.
   $content_width = check_plain(theme_get_setting('content_width', 'writer'));
