@@ -24,7 +24,7 @@
  * - label: The title of the node.
  * - content: All node items. Use {{ content }} to print them all,
  *   or print a subset such as {{ content.field_example }}. Use
- *   {% hide(content.field_example) %} to temporarily suppress the printing
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
  *   of a given element.
  * - user_picture: The node author's picture from user-picture.html.twig.
  * - date: Formatted creation date. Preprocess functions can reformat it by
@@ -98,14 +98,12 @@
   </header>
 
   <div class="node-main contextual-region">
-    
+
     {{ title_suffix }}
 
     <div {{ content_attributes }}>
       {# We hide the comments and links now so that we can render them later. #}
-      {% hide(content.comments) %}
-      {% hide(content.links) %}
-      {{ content }}
+      {{ content|without('comments', 'links') }}
     </div>
 
     {% if content.links %}

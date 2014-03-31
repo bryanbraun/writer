@@ -8,9 +8,45 @@
 /**
  * Implements hook_preprocess_html().
  *
- * Include CSS for fonts.
+ * Include meta tags, fonts, and CSS for code snippets.
  */
 function writer_preprocess_html(&$variables) {
+  // Set up fonts.
+  $font_attributes = array(
+    'rel' => 'stylesheet',
+    'type' => 'text/css',
+    'href' => 'http://fonts.googleapis.com/css?family=Lato|Inconsolata|Merriweather:400,400italic,700,700italic&subset=latin,latin-ext',
+  );
+  // Include fonts in our link array.
+  $build['#attached']['drupal_add_html_head_link'][] = array($font_attributes);
+  drupal_render($build);
+
+  // Turn on styles for code snippets as chosen in the theme settings.
+  // To add more options, add the path to the options array below and
+  // add the description to the options array in theme-settings.php.
+  $options = array(
+    'simple' => '/css/simple-format.css',
+    'night' => '/css/night-format.css',
+    'inset' => '/css/inset-format.css',
+    'zebra' => '/css/zebra-format.css',
+  );
+  // Find the value in the theme settings and use it to build a filepath.
+  $my_format = theme_get_setting('code_snippets');
+  $code_snippets_path = drupal_get_path('theme', 'writer') . $options[$my_format];
+  // If the css file exists, add it to our link array, with weight options.
+  if (file_exists($code_snippets_path)) {
+    $css_array = array(
+      '#attached' => array(
+        'css' => array(
+          $code_snippets_path => array(
+            'group' => CSS_AGGREGATE_THEME,
+          ),
+        ),
+      ),
+    );
+    drupal_render($css_array);
+  }
+
   // Set up meta tags.
   // Modern IE & chrome-frame rendering engine tag.
   $rendering_meta = array(
@@ -40,6 +76,7 @@ function writer_preprocess_html(&$variables) {
  * Implements hook_preprocess_page().
  */
 function writer_preprocess_page(&$variables) {
+  /*
   // Turn on styles for code snippets as chosen in the theme settings.
   // To add more options, add the path to the options array below and
   // add the description to the options array in theme-settings.php.
@@ -60,8 +97,10 @@ function writer_preprocess_page(&$variables) {
   }
 
   // Add css for our fonts.
+
   $font_css_url = 'http://fonts.googleapis.com/css?family=Merriweather:400italic,400,700|Lato|Inconsolata&subset=latin,latin-ext';
   $variables['page']['#attached']['css'][][$font_css_url] = array('type' => 'external');
+  */
 
   // Pull the value from theme settings to define the default content width.
   $content_width = check_plain(theme_get_setting('content_width', 'writer'));
@@ -74,15 +113,27 @@ function writer_preprocess_page(&$variables) {
   $wrapper_classes = array();
 
   if (isset($variables['node'])) {
-    if (variable_get('node_submitted_' . $variables['node']->type, TRUE)) {
-      // Submission info is displayed for this node.
-    }
-    else {
-      // No submission info is displayed for this node.
+
+    // Get the per-content-type submission info setting, and use it to define a
+    // wrapper class.
+    $config_file = 'node.type.' . $variables['node']->type->target_id;
+    $submission_info = \Drupal::config($config_file)->get('settings.node.submitted');
+    if (!$submission_info) {
       $wrapper_classes[] = 'no_submission_info';
     }
   }
   $variables['wrapper_classes'] = implode(' ', $wrapper_classes);
+}
+
+/**
+ * Implements hook_preprocess_node().
+ *
+ * Reformat date info. See http://wiki.whatwg.org/wiki/Time_element.
+ */
+function writer_preprocess_node(&$variables) {
+  // Use Drupal's format_date function to reformat dates for the <time> element.
+  $variables['date_time'] = format_date($variables['node']->created->value, 'custom', 'Y-m-d H:i:s');
+  $variables['clean_date'] = format_date($variables['node']->created->value, 'custom', 'j M Y');
 }
 
 /**
@@ -101,15 +152,4 @@ function writer_preprocess_comment(&$variables) {
       '!comment_author' => $variables['author'],
     )
   );
-}
-
-/**
- * Implements hook_preprocess_node().
- *
- * Reformat date info. See http://wiki.whatwg.org/wiki/Time_element.
- */
-function writer_preprocess_node(&$variables) {
-  // Use Drupal's format_date function to reformat dates for the <time> element.
-  $variables['date_time'] = format_date($variables['node']->created->value, 'custom', 'Y-m-d H:i:s');
-  $variables['clean_date'] = format_date($variables['node']->created->value, 'custom', 'j M Y');
 }
