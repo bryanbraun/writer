@@ -387,12 +387,12 @@ td {
   cursor: pointer;
 }
 
-.form-item-search-block-form input {
+.search-block-form .form-search {
   width: 220px;
 }
 
-#search-block-form > div {
-  float: right;
+#search-block-form {
+  text-align: right;
 }
 
 .comment p {
@@ -598,21 +598,25 @@ padding: 0 0.5em;
   text-transform: uppercase;
 }
 
-.foot-wrap ul.links  {
+.foot-links ul.menu  {
   margin: 0;
 }
 
-.foot-wrap .links li {
+.foot-wrap .foot-links li {
   float: left;
   line-height: 11px;
   list-style-type: none;
   padding: 0 0.5em 8px;
 }
 
-.foot-wrap .links a {
+.foot-wrap .foot-links a {
   color: #888888;
   display: block;
   font-size: 1em;
+}
+
+ul.menu a.active {
+  color: #888888;
 }
 
 .contextual-links a {
