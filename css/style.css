@@ -426,23 +426,23 @@ ul.primary {
 /**
  * Navigation
  */
-nav {
+.wnav {
   float: right;
   max-width: 48%;
 }
 
-nav ul {
+.wnav ul {
   margin: 0;
 }
 
-nav li {
+.wnav li {
   float: left;
   line-height: 11px;
   list-style-type: none;
   padding: 4px 0.5em;
 }
 
-nav a {
+.wnav a {
   color: #888888;
   display: block;
   font-family: 'Lato', Helvetica, sans-serif;
@@ -453,14 +453,14 @@ nav a {
   text-transform: uppercase;
 }
 
-.head-wrap nav a.active {
+.head-links a.active {
   border-bottom: 2px solid #888888;
   color: #888888;
   padding-bottom: 4px;
   text-decoration: none;
 }
 
-nav h2 {
+.wrapper nav h2 {
   /* Hide titles of theme menus */
   display: none;
 }
@@ -757,7 +757,7 @@ padding: 0 0.5em;
     background: url('../img/dropdown-arrows.png') 2px 0 no-repeat;
   }
 
-  .head-wrap nav a.active {
+  .head-links a.active {
     /* removed default link underlining */
     border-bottom: none;
   }

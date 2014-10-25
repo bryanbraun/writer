@@ -94,7 +94,7 @@
           <?php endif; ?>
         </hgroup>
       <?php endif; ?>
-      <nav id="main-nav">
+      <nav id="main-nav" class="head-links wnav">
         <?php print theme('links__system_main_menu', array(
           'links' => $main_menu,
           'attributes' => array(
@@ -140,7 +140,7 @@
   	<?php endif; ?>
   	<?php print render($page['footer_bottom']); ?>
   	<div class="foot-wrap clearfix">
-      <nav class="foot-links">
+      <nav class="foot-links wnav">
     		<?php print theme('links__system_secondary_menu', array(
           'links' => $secondary_menu,
           'attributes' => array(

@@ -75,7 +75,7 @@ function writer_preprocess_page(&$variables) {
 
   // If this page is displaying a node, find whether the submission information
   // (date submitted) will be displayed, so we can add a class to the wrapper.
-  $wrapper_classes = array();
+  $wrapper_classes = array('wrapper');
 
   if (isset($variables['node'])) {
     if (variable_get('node_submitted_' . $variables['node']->type, TRUE)) {
