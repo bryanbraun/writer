@@ -253,14 +253,14 @@ ol li {
   list-style-type: decimal;
 }
 
-body.writer ul li,
-body.writer ol li,
-body.writer dl dt {
+.writer .wrapper ul li,
+.writer .wrapper ol li,
+.writer .wrapper dl dt {
   padding-top: 5px;
   padding-bottom: 5px;
 }
 
-body.writer .krumo-root li {
+.writer .wrapper .krumo-root li {
   /* correct padding on debugging lists */
   padding: 0;
 }
