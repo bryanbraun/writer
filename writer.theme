@@ -57,7 +57,7 @@ function writer_page_attachments_alter(array &$build) {
     'href' => 'http://fonts.googleapis.com/css?family=Lato|Inconsolata|Merriweather:400,400italic,700,700italic&subset=latin,latin-ext',
   );
 
-  $build['#attached']['html_head_link'][] = array($font_attributes);  
+  $build['#attached']['html_head_link'][] = array($font_attributes);
 
   // Set up meta tags.
   // Modern IE & chrome-frame rendering engine tag.
@@ -70,18 +70,7 @@ function writer_page_attachments_alter(array &$build) {
     ),
   );
   $build['#attached']['html_head'][] = [$rendering_meta, 'rendering_meta'];
-
-  // Mobile viewport tag.
-  $mobile_meta = array(
-    '#type' => 'html_tag',
-    '#tag' => 'meta',
-    '#attributes' => array(
-      'name' => 'viewport',
-      'content' => 'width=device-width',
-    ),
-  );
-  $build['#attached']['html_head'][] = [$mobile_meta, 'responsive_meta'];
-  }
+}
 
 /**
  * Implements hook_preprocess_page().
