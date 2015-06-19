@@ -306,6 +306,73 @@ td {
   line-height: 1.62;
 }
 
+.messages,
+.error {
+  font-family: 'Lato', Helvetica, sans-serif;
+}
+/**
+ * Form Styles
+ */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="search"],
+input[type="date"],
+input[type="time"],
+input[type="datalist"],
+textarea {
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-size: 0.8em;
+  border: 1px solid #ccc;
+  padding: 3px 5px;
+}
+.form-submit {
+  background: #aaa;
+  border: 1px solid #aaa;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  margin: 0 2px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+.form-submit:hover {
+  background: #999;
+  border-color: #999;
+}
+
+#block-writer-search {
+  margin: 1em 0;
+  zoom: 1;
+}
+#block-writer-search:before,
+#block-writer-search:after {
+  content: "";
+  display: table;
+}
+#block-writer-search:after {
+  clear: both;
+}
+#block-writer-search h2 {
+  display: none;
+}
+#block-writer-search input {
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-size: 0.62em;
+}
+.search-block-form input {
+  width: 220px;
+}
+#block-writer-search .form-submit {
+  padding: 3px 6px;
+}
+#search-block-form {
+  text-align: right;
+}
+
 /**
  * Specific Styles
  */
@@ -325,7 +392,7 @@ td {
 
 .site-name-wrap {
   float: left;
-  width: 48%;  
+  width: 48%;
 }
 
 #site-name {
@@ -352,47 +419,6 @@ td {
   font-weight: normal;
   text-transform: uppercase;
   margin-bottom: 0;
-}
-
-#block-writer-search {
-  margin: 1em 0;
-  zoom: 1;
-}
-
-#block-writer-search:before,
-#block-writer-search:after {
-  content: "";
-  display: table;
-}
-
-#block-writer-search:after {
-  clear: both;
-}
-
-#block-writer-search h2 {
-  display: none;
-}
-
-#block-writer-search input {
-  font-family: 'Lato', Helvetica, sans-serif;
-  font-size: 0.62em;
-}
-
-#block-writer-search .form-submit {
-  background: none;
-  border: 1px solid #aaa;
-  color: #888;
-  text-transform: uppercase;
-  padding-bottom: 2px;
-  cursor: pointer;
-}
-
-.search-block-form .form-search {
-  width: 220px;
-}
-
-#search-block-form {
-  text-align: right;
 }
 
 .comment p {
