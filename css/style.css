@@ -295,6 +295,73 @@ section {
   line-height: 1.62em;
 }
 
+.messages,
+.error {
+  font-family: 'Lato', Helvetica, sans-serif;
+}
+/**
+ * Form Styles
+ */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="search"],
+input[type="date"],
+input[type="time"],
+input[type="datalist"],
+textarea {
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-size: 0.8em;
+  border: 1px solid #ccc;
+  padding: 3px 5px;
+}
+.form-submit {
+  background: #aaa;
+  border: 1px solid #aaa;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  margin: 0 2px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+.form-submit:hover {
+  background: #999;
+  border-color: #999;
+}
+
+#block-search-form {
+  margin: 1em 0;
+  zoom: 1;
+}
+#block-search-form:before,
+#block-search-form:after {
+  content: "";
+  display: table;
+}
+#block-search-form:after {
+  clear: both;
+}
+#block-search-form h2 {
+  display: none;
+}
+#block-search-form input {
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-size: 0.62em;
+}
+.form-item-search-block-form input {
+  width: 220px;
+}
+.block-search .form-submit {
+  padding: 3px 6px;
+}
+#search-block-form > div {
+  float: right;
+}
+
 /**
  * Specific Styles
  */
@@ -314,7 +381,7 @@ section {
 
 .site-name-wrap {
   float: left;
-  width: 48%;  
+  width: 48%;
 }
 
 #site-name {
@@ -341,47 +408,6 @@ section {
   font-weight: normal;
   text-transform: uppercase;
   margin-bottom: 0;
-}
-
-#block-search-form {
-  margin: 1em 0;
-  zoom: 1;
-}
-
-#block-search-form:before,
-#block-search-form:after {
-  content: "";
-  display: table;
-}
-
-#block-search-form:after {
-  clear: both;
-}
-
-#block-search-form h2 {
-  display: none;
-}
-
-#block-search-form input {
-  font-family: 'Lato', Helvetica, sans-serif;
-  font-size: 0.62em;
-}
-
-#block-search-form .form-submit {
-  background: none;
-  border: 1px solid #aaa;
-  color: #888;
-  text-transform: uppercase;
-  padding-bottom: 2px;
-  cursor: pointer;
-}
-
-.form-item-search-block-form input {
-  width: 220px;
-}
-
-#search-block-form > div {
-  float: right;
 }
 
 .comment p {
