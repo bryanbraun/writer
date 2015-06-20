@@ -1,0 +1,9 @@
+global-assets:
+  css:
+    theme:
+      css/style.css: {}
+  js:
+    js/script.js: {}
+    js/fastclick.js: {}
+  dependencies:
+    - core/jquery

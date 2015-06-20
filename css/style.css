@@ -332,6 +332,8 @@ textarea {
 .form-submit {
   background: #aaa;
   border: 1px solid #aaa;
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-size: 0.8em;
   font-weight: bold;
   color: white;
   text-transform: uppercase;
@@ -344,33 +346,37 @@ textarea {
   border-color: #999;
 }
 
-#block-writer-search {
+.search-block-form {
   margin: 1em 0;
   zoom: 1;
+  text-align
 }
-#block-writer-search:before,
-#block-writer-search:after {
+.search-block-form:before,
+.search-block-form:after {
   content: "";
   display: table;
 }
-#block-writer-search:after {
+.search-block-form:after {
   clear: both;
 }
-#block-writer-search h2 {
+.search-block-form h2 {
   display: none;
 }
-#block-writer-search input {
+.search-block-form input {
   font-family: 'Lato', Helvetica, sans-serif;
   font-size: 0.62em;
 }
-.search-block-form input {
+.search-block-form .form-search {
   width: 220px;
 }
-#block-writer-search .form-submit {
+.search-block-form .form-submit {
   padding: 3px 6px;
 }
 #search-block-form {
   text-align: right;
+}
+#search-block-form > div {
+  display: inline;
 }
 
 /**
