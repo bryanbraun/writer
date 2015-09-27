@@ -7,3 +7,19 @@ global-assets:
     js/fastclick.js: {}
   dependencies:
     - core/jquery
+inset-snippets:
+  css:
+    theme:
+      css/inset-format.css: {}
+night-snippets:
+  css:
+    theme:
+      css/night-format.css: {}
+simple-snippets:
+  css:
+    theme:
+      css/simple-format.css: {}
+zebra-snippets:
+  css:
+    theme:
+      css/zebra-format.css: {}

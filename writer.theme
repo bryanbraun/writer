@@ -5,7 +5,7 @@
  * Contains preprocess functions for the Writer theme.
  */
 
-use Drupal\Component\Utility\String;
+use Drupal\Component\Utility\Html;
 
 /**
  * Implements hook_preprocess_html().
@@ -14,30 +14,18 @@ use Drupal\Component\Utility\String;
  */
 function writer_preprocess_html(&$variables) {
   // Turn on styles for code snippets as chosen in the theme settings.
-  // To add more options, add the path to the options array below and
-  // add the description to the options array in theme-settings.php.
-  $options = array(
-    'simple' => '/css/simple-format.css',
-    'night' => '/css/night-format.css',
-    'inset' => '/css/inset-format.css',
-    'zebra' => '/css/zebra-format.css',
+  // To add more options, add the name to the libraries array below,
+  // add the description to the options array in theme-settings.php,
+  // and add the path to writer.libraries.yml.
+  $libraries = array(
+    'simple' => 'writer/simple-snippets',
+    'night' => 'writer/night-snippets',
+    'inset' => 'writer/inset-snippets',
+    'zebra' => 'writer/zebra-snippets',
   );
-  // Find the value in the theme settings and use it to build a filepath.
-  $my_format = theme_get_setting('code_snippets');
-  $code_snippets_path = drupal_get_path('theme', 'writer') . $options[$my_format];
-  // If the css file exists, add it to our link array, with weight options.
-  if (file_exists($code_snippets_path)) {
-    $css_array = array(
-      '#attached' => array(
-        'css' => array(
-          $code_snippets_path => array(
-            'group' => CSS_AGGREGATE_THEME,
-          ),
-        ),
-      ),
-    );
-    drupal_render($css_array);
-  }
+  // Find the value in the theme settings and use it to lookup the library name.
+  $code_snippets_library = $options[theme_get_setting('code_snippets')];
+  $variables['#attached']['library'][] = $code_snippets_library;
 
   // Add a theme-specific css class to the body tag.
   $variables['attributes']['class'][] = 'writer';
@@ -78,7 +66,7 @@ function writer_page_attachments_alter(array &$build) {
 function writer_preprocess_page(&$variables) {
 
   // Pull the value from theme settings to define the default content width.
-  $content_width = String::checkPlain(theme_get_setting('content_width', 'writer'));
+  $content_width = Html::escape(theme_get_setting('content_width', 'writer'));
   // Build the style attribute, and store in a template variable.
   $content_width_rule = 'style="max-width: ' . $content_width . 'px;"';
   $variables['content_width_rule'] = $content_width_rule;
