@@ -31,7 +31,7 @@
  *   calling format_date() with the desired parameters on
  *   $variables['created'].
  * - name: Themed username of node author output from theme_username().
- * - node_url: Direct URL of the current node.
+ * - url: Direct URL of the current node.
  * - display_submitted: Whether submission information should be displayed.
  * - submitted: Submission information created from name and date during
  *   template_preprocess_node().
@@ -85,7 +85,7 @@
 
     {% if not page %}
       <h2{{ title_attributes }}>
-        <a href="{{ node_url }}" rel="bookmark">{{ label }}</a>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
       </h2>
     {% endif %}
 
