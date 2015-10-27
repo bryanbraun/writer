@@ -57,6 +57,7 @@
  *
  * Regions:
  * - page.pre_header: Items for the pre_header region.
+ * - page.main_menu: Items for the main_menu region.
  * - page.header: Items for the header region.
  * - page.post_header: Items for the post_header region.
  * - page.highlighted: Items for the highlighted content region.
@@ -66,7 +67,8 @@
  * - page.footer_left: Items for the footer left region.
  * - page.footer_right: Items for the footer_right region.
  * - page.footer_bottom: Items for the footer_bottom region.
- * - page.footer: Items for the footer region.
+ * - page.footer_message: Items for the footer_message region.
+ * - page.footer_menu: Items for the footer_menu region.
  *
  * @see template_preprocess_page()
  * @see writer_preprocess_page()
@@ -100,11 +102,7 @@
         </hgroup>
       {% endif %}
 
-      {% if main_menu %}
-        <nav role="navigation" id="main-nav" class="main-nav">
-          {{ main_menu }}
-        </nav>
-      {% endif %}
+      {{ page.main_menu }}
 	  </div>
     {{ page.header }}
   </header>
@@ -165,10 +163,10 @@
   	{% endif %}
   	{{ page.footer_bottom }}
   	<div class="foot-wrap clearfix">
-      {% if secondary_menu %}
-        <nav role="navigation" class="foot-links">
-      		{{ secondary_menu }}
-      	</nav>
+      {% if page.footer_message %}
+        <div class="foot-links">
+          {{ page.footer_menu }}
+        </div>
       {% endif %}
       {% if page.footer_message %}
         <div class="footer-msg">

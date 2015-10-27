@@ -9,6 +9,7 @@ libraries:
   - writer/global-assets
 regions:
   pre_header: 'Pre-Header'
+  main_menu: 'Main Menu'
   header: Header
   post_header: 'Post-Header'
   highlighted: Highlighted
@@ -19,3 +20,4 @@ regions:
   footer_right: 'Footer Right'
   footer_bottom: 'Footer Bottom'
   footer_message: 'Footer Message'
+  footer_menu: 'Footer Menu'
