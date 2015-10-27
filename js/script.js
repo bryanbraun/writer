@@ -3,18 +3,27 @@
  */
 jQuery(document).ready(function($){
   // Add in the arrow element.
-  $('.main-nav > h2').append('<span id="menu-arrow"></span>');
+  $('header nav > h2').append('<span id="menu-arrow"></span>');
 
   // Turn on the menu listener.
-  $('.main-nav > h2').click(function() {
+  $('header nav > h2').click(function() {
     $('#menu-arrow').toggleClass('menu-open');
-    $('.main-nav ul').slideToggle('fast');
+    $('header nav ul').slideToggle('fast');
   });
 
   // Solve the disappearing menu bug.
+  if ($(window).width() <= 580) {
+    $('header nav ul').attr('style','');
+    $('header nav > h2').removeClass('visually-hidden');
+  } else {
+    $('header nav > h2').addClass('visually-hidden');
+  }
   $(window).resize(function() {
     if ($(window).width() <= 580) {
-      $('.main-nav ul').attr('style','');
+      $('header nav ul').attr('style','');
+      $('header nav > h2').removeClass('visually-hidden');
+    } else {
+      $('header nav > h2').addClass('visually-hidden');
     }
   });
 

@@ -469,23 +469,23 @@ ul.primary {
 /**
  * Navigation
  */
-.main-nav {
+header nav {
   float: right;
   max-width: 48%;
 }
 
-.main-nav ul {
+header nav ul {
   margin: 0;
 }
 
-.main-nav li {
+header nav li {
   float: left;
   line-height: 11px;
   list-style-type: none;
   padding: 4px 0.5em;
 }
 
-.main-nav a {
+header nav a {
   color: #888888;
   display: block;
   font-family: 'Lato', Helvetica, sans-serif;
@@ -496,7 +496,7 @@ ul.primary {
   text-transform: uppercase;
 }
 
-.head-wrap .main-nav a.active {
+ header nav a.is-active {
   border-bottom: 2px solid #888888;
   color: #888888;
   padding-bottom: 4px;
@@ -508,17 +508,17 @@ nav h2 {
   display: none;
 }
 
-li a.active {
+li a.is-active {
   color: #888888;
   text-decoration: none;
 }
 
-ul.tabs li.active a {
+ul.tabs li.is-active a {
   background-color: #f7f7f7;
   border-bottom-color: #f7f7f7;
 }
 
-#main-nav li {
+header nav li {
 padding: 0 0.5em;
 }
 
@@ -647,7 +647,7 @@ padding: 0 0.5em;
   font-size: 1em;
 }
 
-ul.menu a.active {
+ul.menu a.is-active {
   color: #888888;
 }
 
@@ -724,7 +724,7 @@ ul.menu a.active {
     font-size: 1em;
   }
 
-  .head-wrap {
+   {
     font-size: 1.25em;
     padding: 1em 0 0;
   }
@@ -748,14 +748,14 @@ ul.menu a.active {
   }
 
   /* Styles for responsive mobile menu */
-  .main-nav {
+  header nav {
     /* moves the menu below */
     max-width: 100%;
     padding-top: 20px;
     width: 100%;
   }
 
-  .main-nav > h2 {
+  header nav > h2 {
     /* Styles for toggle button */
     color: #888;
     display: block;
@@ -772,18 +772,18 @@ ul.menu a.active {
     height: 14px;
   }
 
-  .js .main-nav ul {
+  .js header nav ul {
     /* if js is enabled, toggle will work */
     display: none;
   }
 
-  .main-nav ul {
+  header nav ul {
     /* if js is not enabled, show menu */
     display: block;
     padding: 0;
   }
 
-  .main-nav ul li {
+  header nav ul li {
     /* make wide rectangular box */
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -793,7 +793,7 @@ ul.menu a.active {
     width: 100%;
   }
 
-  .main-nav ul li a {
+  header nav ul li a {
     /* aligns text in box */
     display: block;
     margin: 0;
@@ -812,7 +812,7 @@ ul.menu a.active {
     background: url('../img/dropdown-arrows.png') 2px 0 no-repeat;
   }
 
-  .head-wrap .main-nav a.active {
+   header nav a.is-active {
     /* removed default link underlining */
     border-bottom: none;
     padding-bottom: 14px;

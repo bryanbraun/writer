@@ -29,6 +29,9 @@ function writer_preprocess_html(&$variables) {
 
   // Add a theme-specific css class to the body tag.
   $variables['attributes']['class'][] = 'writer';
+
+  // Add no-js class for Modernizr (array not working, only string for class on html_attributes).
+  $variables['html_attributes']['class'] = 'no-js';
 }
 
 /**
