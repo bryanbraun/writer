@@ -24,7 +24,7 @@ function writer_preprocess_html(&$variables) {
     'zebra' => 'writer/zebra-snippets',
   );
   // Find the value in the theme settings and use it to lookup the library name.
-  $code_snippets_library = $options[theme_get_setting('code_snippets')];
+  $code_snippets_library = $libraries[theme_get_setting('code_snippets')];
   $variables['#attached']['library'][] = $code_snippets_library;
 
   // Add a theme-specific css class to the body tag.
