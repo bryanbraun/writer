@@ -436,20 +436,20 @@ textarea {
   margin-bottom: 8px;
 }
 
-#comments h2 {
+.comments h2 {
   font-size: 1.6em;
 }
-#comments h3 {
+.comments h3 {
   font-size: 1.3em;
 }
-#comments h4 {
+.comments h4 {
   font-size: 1.2em;
 }
-#comments h5 {
+.comments h5 {
   font-size: 1.1em;
 }
 
-#comments .filter-wrapper {
+.filter-wrapper {
   font-size: 0.8em;
 }
 

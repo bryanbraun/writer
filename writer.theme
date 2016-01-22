@@ -108,6 +108,7 @@ function writer_preprocess_node(&$variables) {
  * Reformat date info. See http://wiki.whatwg.org/wiki/Time_element.
  */
 function writer_preprocess_comment(&$variables) {
+  $variables['attributes']['class'][] = 'comment';
 
   if (is_array($variables['author'])) {
     $username = array(
@@ -128,4 +129,11 @@ function writer_preprocess_comment(&$variables) {
       '!comment_author' => $variables['author'],
     )
   );
+}
+
+/**
+ * Implements template_preprocess_field__comment().
+ */
+function writer_preprocess_field__comment(&$variables) {
+  $variables['attributes']['class'][] = 'comments';
 }
