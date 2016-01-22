@@ -108,13 +108,23 @@ function writer_preprocess_node(&$variables) {
  * Reformat date info. See http://wiki.whatwg.org/wiki/Time_element.
  */
 function writer_preprocess_comment(&$variables) {
+
+  if (is_array($variables['author'])) {
+    $username = array(
+      '#theme' => 'username',
+      '#account' => $variables['comment']->getOwner(),
+    );
+    $variables['author'] = drupal_render($username);
+  }
+
   // Use Drupal's format_date function to reformat the date.
   $clean_date = format_date($variables['comment']->created->value, 'custom', 'j M Y');
   $date_time = format_date($variables['comment']->created->value, 'custom', 'Y-m-d H:i:s');
 
   // Build a translatable line with clean, html5 date information.
-  $variables['submitted'] = t('On !date_time, !comment_author said...', array(
-      '!date_time' => '<time datetime="' . $date_time . '">' . $clean_date . '</time>',
+  $variables['submitted'] = t('On <time datetime="@date_time">@clean_date</time>, !comment_author said...', array(
+      '@date_time' => $date_time,
+      '@clean_date' => $clean_date,
       '!comment_author' => $variables['author'],
     )
   );
