@@ -543,7 +543,7 @@ padding: 0 0.5em;
   position: static;
 }
 
-.node.not-page {
+article.not-page {
   position: relative;
 }
 

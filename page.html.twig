@@ -81,30 +81,9 @@
   {{ page.pre_header }}
   <header role="banner" id="site-header">
   	<div class="head-wrap clearfix">
-      {% if logo %}
-        <div class="logo-wrap">
-          <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home" id="logo">
-            <img src="{{ logo }}" alt="{{ 'Home'|t }}" />
-          </a>
-        </div>
-      {% endif %}
-
-      {% if site_name or site_slogan %}
-        <hgroup class="site-name-wrap">
-          {% if site_name %}
-    	      <h1 id="site-name">
-    	        <a href="{{ front_page }}">{{ site_name }}</a>
-    	      </h1>
-          {% endif %}
-          {% if site_slogan %}
-            <h2 id="site-slogan">{{ site_slogan }}</h2>
-          {% endif %}
-        </hgroup>
-      {% endif %}
-
+      {{ page.header }}
       {{ page.main_menu }}
 	  </div>
-    {{ page.header }}
   </header>
 
   {{ page.post_header }}
