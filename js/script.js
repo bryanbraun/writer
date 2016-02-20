@@ -26,9 +26,4 @@ jQuery(document).ready(function($){
       $('header nav > h2').addClass('visually-hidden');
     }
   });
-
-  // Initialize fastclick for mobile devices.
-  window.addEventListener('load', function() {
-    FastClick.attach(document.body);
-  }, false);
 });

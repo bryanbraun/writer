@@ -4,7 +4,6 @@ global-assets:
       css/style.css: {}
   js:
     js/script.js: {}
-    js/fastclick.js: {}
   dependencies:
     - core/jquery
     - core/modernizr
