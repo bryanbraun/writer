@@ -130,3 +130,22 @@ function writer_preprocess_comment(&$variables) {
 function writer_preprocess_field__comment(&$variables) {
   $variables['attributes']['class'][] = 'comments';
 }
+
+/**
+ * Implements template_preprocess_block().
+ *
+ * We're manually removing contextual links from this block because
+ * they aren't that necessary and the position: absolute it brings
+ * breaks the positioning of the logo.
+ */
+function writer_preprocess_block__system_branding_block(&$variables) {
+  $contextualLinksClassKey = array_search('contextual-region', $variables['attributes']['class']);
+  if ($contextualLinksClassKey !== false) {
+    // Remove the wrapper class for the links.
+    unset($variables['attributes']['class'][$contextualLinksClassKey]);
+    // Remove the links themselves.
+    unset($variables['title_suffix']['contextual_links']);
+    // Remove contextual-links from the elements array.
+    unset($variables['elements']['#contextual_links']);
+  }
+}
