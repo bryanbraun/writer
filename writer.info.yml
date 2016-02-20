@@ -1,5 +1,6 @@
 name: Writer
 type: theme
+base theme: classy
 description: "A minimalist theme designed for a developer's personal blog."
 package: Writer
 core: 8.x
