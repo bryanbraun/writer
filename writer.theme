@@ -73,15 +73,13 @@ function writer_preprocess_page(&$variables) {
   $content_width = Html::escape(theme_get_setting('content_width', 'writer'));
   $variables['attributes']['style'][] = 'max-width: ' . $content_width . 'px;';
 
-  // If this page is displaying a node, find whether the submission information
-  // (date submitted) will be displayed, so we can add a class to the wrapper.
+  // If this page is displaying a node, find whether the publish date will be
+  // displayed, so we can add a class to the wrapper.
   if (isset($variables['node'])) {
-    // Get the per-content-type submission info setting, and use it to define a
-    // wrapper class.
-    $config_file = 'node.type.' . $variables['node']->type->target_id;
-    $submission_info = \Drupal::config($config_file)->get('settings.node.submitted');
-    if (!$submission_info) {
-      $variables['attributes']['class'][] = 'no_submission_info';
+    $content_type = node_type_load($variables['node']->type->target_id);
+    $isDisplayingPublishDate = $content_type->displaySubmitted();
+    if (!$isDisplayingPublishDate) {
+      $variables['attributes']['class'][] = 'no-publish-date';
     }
   }
 }

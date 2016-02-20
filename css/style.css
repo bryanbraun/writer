@@ -298,7 +298,7 @@ td {
   /* default width -- will be overridden if alternative inline rule is specified */
   max-width: 630px;
 }
-#wrapper.no_submission_info {
+#wrapper.no-publish-date {
   padding: 0 100px;
 }
 
@@ -696,7 +696,7 @@ ul.menu a.is-active {
     margin: 25px 0;
   }
 
-  #wrapper {
+  .writer #wrapper {
     padding: 0 16px;
   }
 }
