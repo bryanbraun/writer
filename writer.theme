@@ -67,28 +67,23 @@ function writer_page_attachments_alter(array &$build) {
  * Implements hook_preprocess_page().
  */
 function writer_preprocess_page(&$variables) {
+  $variables['attributes']['class'][] = 'wrapper';
 
   // Pull the value from theme settings to define the default content width.
   $content_width = Html::escape(theme_get_setting('content_width', 'writer'));
-  // Build the style attribute, and store in a template variable.
-  $content_width_rule = 'style="max-width: ' . $content_width . 'px;"';
-  $variables['content_width_rule'] = $content_width_rule;
+  $variables['attributes']['style'][] = 'max-width: ' . $content_width . 'px;';
 
   // If this page is displaying a node, find whether the submission information
   // (date submitted) will be displayed, so we can add a class to the wrapper.
-  $wrapper_classes = array('wrapper');
-
   if (isset($variables['node'])) {
-
     // Get the per-content-type submission info setting, and use it to define a
     // wrapper class.
     $config_file = 'node.type.' . $variables['node']->type->target_id;
     $submission_info = \Drupal::config($config_file)->get('settings.node.submitted');
     if (!$submission_info) {
-      $wrapper_classes[] = 'no_submission_info';
+      $variables['attributes']['class'][] = 'no_submission_info';
     }
   }
-  $variables['wrapper_classes'] = implode(' ', $wrapper_classes);
 }
 
 /**
