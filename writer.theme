@@ -45,7 +45,7 @@ function writer_page_attachments_alter(array &$build) {
   $font_attributes = array(
     'rel' => 'stylesheet',
     'type' => 'text/css',
-    'href' => 'http://fonts.googleapis.com/css?family=Lato|Inconsolata|Merriweather:400,400italic,700,700italic&subset=latin,latin-ext',
+    'href' => 'https://fonts.googleapis.com/css?family=Lato|Inconsolata|Merriweather:400,400italic,700,700italic&subset=latin,latin-ext',
   );
 
   $build['#attached']['html_head_link'][] = array($font_attributes);
