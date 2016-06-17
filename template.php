@@ -13,7 +13,7 @@
 function writer_preprocess_html(&$variables) {
   // Add css for our fonts.
   drupal_add_css(
-    'http://fonts.googleapis.com/css?family=Merriweather:400italic,400,700|Lato|Inconsolata&subset=latin,latin-ext',
+    'https://fonts.googleapis.com/css?family=Merriweather:400italic,400,700|Lato|Inconsolata&subset=latin,latin-ext',
     array('type' => 'external')
   );
 
