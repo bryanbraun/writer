@@ -139,13 +139,15 @@ function writer_preprocess_field__comment(&$variables) {
  * breaks the positioning of the logo.
  */
 function writer_preprocess_block__system_branding_block(&$variables) {
-  $contextualLinksClassKey = array_search('contextual-region', $variables['attributes']['class']);
-  if ($contextualLinksClassKey !== false) {
-    // Remove the wrapper class for the links.
-    unset($variables['attributes']['class'][$contextualLinksClassKey]);
-    // Remove the links themselves.
-    unset($variables['title_suffix']['contextual_links']);
-    // Remove contextual-links from the elements array.
-    unset($variables['elements']['#contextual_links']);
+  if (isset($variables['attributes']['class'])) {
+    $contextualLinksClassKey = array_search('contextual-region', $variables['attributes']['class']);
+    if ($contextualLinksClassKey !== false) {
+      // Remove the wrapper class for the links.
+      unset($variables['attributes']['class'][$contextualLinksClassKey]);
+      // Remove the links themselves.
+      unset($variables['title_suffix']['contextual_links']);
+      // Remove contextual-links from the elements array.
+      unset($variables['elements']['#contextual_links']);
+    }
   }
 }
