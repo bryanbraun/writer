@@ -116,10 +116,10 @@ function writer_preprocess_comment(&$variables) {
   $date_time = format_date($variables['comment']->created->value, 'custom', 'Y-m-d H:i:s');
 
   // Build a translatable line with clean, html5 date information.
-  $variables['submitted'] = t('On <time datetime="@date_time">@clean_date</time>, !comment_author said...', array(
+  $variables['submitted'] = t('On <time datetime="@date_time">@clean_date</time>, @comment_author said...', array(
       '@date_time' => $date_time,
       '@clean_date' => $clean_date,
-      '!comment_author' => $variables['author'],
+      '@comment_author' => $variables['author'],
     )
   );
 }
