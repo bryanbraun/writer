@@ -17,12 +17,12 @@ function writer_preprocess_html(&$variables) {
   // To add more options, add the name to the libraries array below,
   // add the description to the options array in theme-settings.php,
   // and add the path to writer.libraries.yml.
-  $libraries = array(
+  $libraries = [
     'simple' => 'writer/simple-snippets',
     'night' => 'writer/night-snippets',
     'inset' => 'writer/inset-snippets',
     'zebra' => 'writer/zebra-snippets',
-  );
+  ];
   // Find the value in the theme settings and use it to lookup the library name.
   $code_snippets_library = $libraries[theme_get_setting('code_snippets')];
   $variables['#attached']['library'][] = $code_snippets_library;
@@ -30,7 +30,8 @@ function writer_preprocess_html(&$variables) {
   // Add a theme-specific css class to the body tag.
   $variables['attributes']['class'][] = 'writer';
 
-  // Add no-js class for Modernizr (array not working, only string for class on html_attributes).
+  // Add no-js class for Modernizr (array not working, only string
+  // for class on html_attributes).
   $variables['html_attributes']['class'] = 'no-js';
 }
 
@@ -42,24 +43,24 @@ function writer_preprocess_html(&$variables) {
 function writer_page_attachments_alter(array &$build) {
 
   // Include fonts.
-  $font_attributes = array(
+  $font_attributes = [
     'rel' => 'stylesheet',
     'type' => 'text/css',
     'href' => 'https://fonts.googleapis.com/css?family=Lato|Inconsolata|Merriweather:400,400italic,700,700italic&subset=latin,latin-ext',
-  );
+  ];
 
-  $build['#attached']['html_head_link'][] = array($font_attributes);
+  $build['#attached']['html_head_link'][] = [$font_attributes];
 
   // Set up meta tags.
   // Modern IE & chrome-frame rendering engine tag.
-  $rendering_meta = array(
+  $rendering_meta = [
     '#type' => 'html_tag',
     '#tag' => 'meta',
-    '#attributes' => array(
+    '#attributes' => [
       'http-equiv' => 'X-UA-Compatible',
       'content' => 'IE=edge,chrome=1',
-    ),
-  );
+    ],
+  ];
   $build['#attached']['html_head'][] = [$rendering_meta, 'rendering_meta'];
 }
 
@@ -104,10 +105,10 @@ function writer_preprocess_comment(&$variables) {
   $variables['attributes']['class'][] = 'comment';
 
   if (is_array($variables['author'])) {
-    $username = array(
+    $username = [
       '#theme' => 'username',
       '#account' => $variables['comment']->getOwner(),
-    );
+    ];
     $variables['author'] = drupal_render($username);
   }
 
@@ -116,11 +117,11 @@ function writer_preprocess_comment(&$variables) {
   $date_time = format_date($variables['comment']->created->value, 'custom', 'Y-m-d H:i:s');
 
   // Build a translatable line with clean, html5 date information.
-  $variables['submitted'] = t('On <time datetime="@date_time">@clean_date</time>, @comment_author said...', array(
-      '@date_time' => $date_time,
-      '@clean_date' => $clean_date,
-      '@comment_author' => $variables['author'],
-    )
+  $variables['submitted'] = t('On <time datetime="@date_time">@clean_date</time>, @comment_author said...', [
+    '@date_time' => $date_time,
+    '@clean_date' => $clean_date,
+    '@comment_author' => $variables['author'],
+  ]
   );
 }
 
@@ -141,7 +142,7 @@ function writer_preprocess_field__comment(&$variables) {
 function writer_preprocess_block__system_branding_block(&$variables) {
   if (isset($variables['attributes']['class'])) {
     $contextualLinksClassKey = array_search('contextual-region', $variables['attributes']['class']);
-    if ($contextualLinksClassKey !== false) {
+    if ($contextualLinksClassKey !== FALSE) {
       // Remove the wrapper class for the links.
       unset($variables['attributes']['class'][$contextualLinksClassKey]);
       // Remove the links themselves.

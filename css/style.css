@@ -168,22 +168,16 @@ table {
 /**
  * General Styles
  */
+
 html {
   overflow-y: scroll;
-  /**
-   * -webkit-font-smoothing: antialiased;
-   *
-   * Enable this to test out webkit antilaliased font smoothing.
-   * I'm choosing to leave it off by default, for now.
-   *
-   * Read more at: http://maxvoltar.com/archive/-webkit-font-smoothing
-   */
 }
 
 body {
   background-color: #f7f7f7; /* Nearly white */
   color: #292929; /* Nearly black */
-  font-family: 'Merriweather', 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  font-family: 'Merriweather', 'Palatino Linotype', 'Book Antiqua', Palatino,
+    serif;
 }
 
 h1,
@@ -313,16 +307,16 @@ td {
 /**
  * Form Styles
  */
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="url"],
-input[type="tel"],
-input[type="number"],
-input[type="search"],
-input[type="date"],
-input[type="time"],
-input[type="datalist"],
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='url'],
+input[type='tel'],
+input[type='number'],
+input[type='search'],
+input[type='date'],
+input[type='time'],
+input[type='datalist'],
 textarea {
   font-family: 'Lato', Helvetica, sans-serif;
   font-size: 0.8em;
@@ -349,11 +343,10 @@ textarea {
 .search-block-form {
   margin: 1em 0;
   zoom: 1;
-  text-align
 }
 .search-block-form:before,
 .search-block-form:after {
-  content: "";
+  content: '';
   display: table;
 }
 .search-block-form:after {
@@ -496,7 +489,7 @@ header nav a {
   text-transform: uppercase;
 }
 
- header nav a.is-active {
+header nav a.is-active {
   border-bottom: 2px solid #888888;
   color: #888888;
   padding-bottom: 4px;
@@ -519,7 +512,7 @@ ul.tabs li.is-active a {
 }
 
 header nav li {
-padding: 0 0.5em;
+  padding: 0 0.5em;
 }
 
 /**
@@ -552,7 +545,7 @@ article.not-page {
 }
 
 .not-page .links {
-  font-size: .85em;
+  font-size: 0.85em;
 }
 
 .not-page .field-name-body {
@@ -587,7 +580,6 @@ article.not-page {
 .field-type-taxonomy-term-reference div.field-item a {
   padding-right: 1em;
 }
-
 
 /**
  * Footer
@@ -630,7 +622,7 @@ article.not-page {
   text-transform: uppercase;
 }
 
-.foot-links ul.menu  {
+.foot-links ul.menu {
   margin: 0;
 }
 
@@ -704,8 +696,8 @@ ul.menu a.is-active {
 @media screen and (max-width: 580px) {
   /* Resize standard text input fields for mobile */
   input:not([type]),
-  input[type="text"],
-  input[type="password"] {
+  input[type='text'],
+  input[type='password'] {
     width: 90%;
   }
 
@@ -724,7 +716,7 @@ ul.menu a.is-active {
     font-size: 1em;
   }
 
-   {
+  .head-wrap {
     font-size: 1.25em;
     padding: 1em 0 0;
   }
@@ -812,7 +804,7 @@ ul.menu a.is-active {
     background: url('../img/dropdown-arrows.png') 2px 0 no-repeat;
   }
 
-   header nav a.is-active {
+  header nav a.is-active {
     /* removed default link underlining */
     border-bottom: none;
     padding-bottom: 14px;
@@ -855,7 +847,7 @@ ul.menu a.is-active {
  */
 .clearfix:before,
 .clearfix:after {
-  content: "";
+  content: '';
   display: table;
 }
 

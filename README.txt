@@ -21,6 +21,7 @@ Design Information:
 
 Other Features
  - The design is responsive and scales nicely on all devices
- - Use theme settings to choose pre-built styles for your code snippets, or define content area width.
+ - Use theme settings to choose pre-built styles for your code snippets,
+   or define content area width.
 
 For info, documentation, and setup tips, visit http://writer.bryanbraun.com
