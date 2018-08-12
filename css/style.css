@@ -99,6 +99,7 @@ video {
   padding: 0;
   vertical-align: baseline;
 }
+
 /**
  * HTML5 display-role reset for older browsers
  */
@@ -304,6 +305,7 @@ td {
 .error {
   font-family: 'Lato', Helvetica, sans-serif;
 }
+
 /**
  * Form Styles
  */
@@ -824,7 +826,7 @@ ul.menu a.is-active {
  */
 
 /**
- * helper classes
+ * Helper classes
  */
 .hide {
   display: none;
@@ -843,7 +845,7 @@ ul.menu a.is-active {
 }
 
 /**
- * clearfix technique
+ * Clearfix technique
  */
 .clearfix:before,
 .clearfix:after {

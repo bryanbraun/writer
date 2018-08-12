@@ -91,9 +91,10 @@ function writer_preprocess_page(&$variables) {
  * Reformat date info. See http://wiki.whatwg.org/wiki/Time_element.
  */
 function writer_preprocess_node(&$variables) {
-  // Use Drupal's format_date function to reformat dates for the <time> element.
-  $variables['date_time'] = format_date($variables['node']->created->value, 'custom', 'Y-m-d H:i:s');
-  $variables['clean_date'] = format_date($variables['node']->created->value, 'custom', 'j M Y');
+  // Use Drupal's date formatter service to reformat dates for the <time> element.
+  $node_created_ts = $variables['node']->created->value;
+  $variables['date_time'] = \Drupal::service('date.formatter')->format($node_created_ts, 'custom', 'Y-m-d H:i:s');
+  $variables['clean_date'] = \Drupal::service('date.formatter')->format($node_created_ts, 'custom', 'j M Y');
 }
 
 /**
@@ -109,19 +110,20 @@ function writer_preprocess_comment(&$variables) {
       '#theme' => 'username',
       '#account' => $variables['comment']->getOwner(),
     ];
-    $variables['author'] = drupal_render($username);
+    $variables['author'] = \Drupal::service('renderer')->render($username);
   }
 
-  // Use Drupal's format_date function to reformat the date.
-  $clean_date = format_date($variables['comment']->created->value, 'custom', 'j M Y');
-  $date_time = format_date($variables['comment']->created->value, 'custom', 'Y-m-d H:i:s');
+  // Use Drupal's date formatter service to reformat the date.
+  $clean_date_ts = $variables['comment']->created->value;
+  $clean_date = \Drupal::service('date.formatter')->format($clean_date_ts, 'custom', 'j M Y');
+  $date_time = \Drupal::service('date.formatter')->format($clean_date_ts, 'custom', 'Y-m-d H:i:s');
 
   // Build a translatable line with clean, html5 date information.
   $variables['submitted'] = t('On <time datetime="@date_time">@clean_date</time>, @comment_author said...', [
-    '@date_time' => $date_time,
-    '@clean_date' => $clean_date,
-    '@comment_author' => $variables['author'],
-  ]
+      '@date_time' => $date_time,
+      '@clean_date' => $clean_date,
+      '@comment_author' => $variables['author'],
+    ]
   );
 }
 

@@ -18,8 +18,8 @@ pre {
 }
 
 /**
-* Override 'code' css rules if using 'pre > code' markup.
-*/
+ * Override 'code' css rules if using 'pre > code' markup.
+ */
 pre > code {
   padding: 0;
 }

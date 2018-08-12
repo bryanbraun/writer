@@ -41,6 +41,7 @@ pre > code {
   overflow-y: hidden;
   padding-bottom: 2em;
 }
+
 * html pre {
   overflow: visible;
   overflow-x: auto;
