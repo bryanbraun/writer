@@ -71,7 +71,7 @@ function writer_preprocess_page(&$variables) {
   $variables['attributes']['class'][] = 'wrapper';
 
   // Pull the value from theme settings to define the default content width.
-  $content_width = Html::escape(theme_get_setting('content_width', 'writer'));
+  $content_width = Html::escape(theme_get_setting('content_width'));
   $variables['attributes']['style'][] = 'max-width: ' . $content_width . 'px;';
 
   // If this page is displaying a node, find whether the publish date will be
